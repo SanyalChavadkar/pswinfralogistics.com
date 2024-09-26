@@ -1,0 +1,15 @@
+{
+    "name": "layna/pswinfralogistics.com",
+    "autoload": {
+        "psr-4": {
+            "Layna\\PswinfralogisticsCom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sanyalgopl",
+            "email": "sanyal@gordinateur.com"
+        }
+    ],
+    "require": {}
+}
