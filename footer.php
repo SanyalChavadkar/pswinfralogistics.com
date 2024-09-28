@@ -31,7 +31,7 @@
             </div>
          </div>
       </div>
-      <div class="btm-strip">
+      <div class="btm-strip position-relative">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-12">
@@ -47,5 +47,4 @@
       <a href="#"><img src="images/float-call.svg" class="img-fluid" alt="call btn"></a>
       <a href="#"><img src="images/float-whatsapp.svg" class="img-fluid" alt="float btn"></a>
    </div>
-</div>
 <?php include("script.php"); ?>

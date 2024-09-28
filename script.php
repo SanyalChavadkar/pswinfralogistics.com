@@ -7,4 +7,5 @@
 <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="./js/slick.min.js"></script>
 <script type="text/javascript" src="./js/aos.js"></script>
-<script src="https://kit.fontawesome.com/fd40963624.js" crossorigin="anonymous"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script> -->
+<!-- <script src="https://kit.fontawesome.com/fd40963624.js" crossorigin="anonymous"></script> -->

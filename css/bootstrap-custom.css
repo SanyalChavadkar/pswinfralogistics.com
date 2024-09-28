@@ -51,6 +51,8 @@ button:focus {
 .darkblue {color: #05050F;}
 .accentblue {color: #333399;}
 .accentred {color: #CC3333;}
+.bg-grey {background: #D6D6EBB2;}
+.bg-lightgrey {background: #F0F0F080;}
 header {
   position: fixed;
   top: 0;
@@ -59,12 +61,13 @@ header {
   right: 0;
   z-index: 5;
   padding: 0px;;
+  background: #fff;
   transition: all 0.3s ease-in-out;
 }
 header.shrink{
   animation: 0.3s 0.3s fadeInDown both;
   /*background: #fff;*/
-  box-shadow: 0px 2px 10px #00000059;
+  /*box-shadow: 0px 2px 10px #00000059;*/
 }
 .heads-up {
   transform: translateY(-6rem);
@@ -150,7 +153,7 @@ header .navbar-expand-md .navbar-nav .nav-link.active {color: #CC3333; font-weig
   transition: all 0.5s ease-in-out;
 }
 #requestbtn:hover {background: #B82E2E;}
-footer {position: relative; margin-top: 9rem;}
+footer {border-top: 1px solid #CACACA;}
 footer .main-footer, footer .btm-strip {width: 100%; padding: 0 7.292vw;}
 .main-footer .container-fluid {
   padding: 1.667vw 3.583vw 2.083vw;
@@ -161,11 +164,6 @@ footer .main-footer, footer .btm-strip {width: 100%; padding: 0 7.292vw;}
 footer .img-box {width: 8.822vw;}
 footer .main-footer .container-fluid {border-bottom: 1px solid #CACACA;}
 .main-footer .footer-wrapp {display: flex; justify-content: space-between; width: calc(100% - 14.395vw);}
-.foot-top .common-btn {
-  background: #000;
-  color: #fff;
-  z-index: 1;
-}
 .footer-logo {
   background: #fff;
   padding: 10px 20px;
@@ -224,41 +222,34 @@ footer p {
 footer .btm-strip {padding: 41px 7.292vw 33px;}
 .btm-strip p {font-size: 18px;}
 .common-btn {
-  width: 152px;
-  height: 46px;
-  background: transparent;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 15px;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  transform: perspective(1px) translateZ(0);
-  transition-duration: 0.3s;
+  width: 13.385vw;
+  background: #333399;
+  padding: 0.833vw 1.25vw;
+  font-size: 0.938vw;
+  font-weight: 600;
+  line-height: 1.458vw;
+  color: #FCFCFC;
+  text-transform: capitalize;
+  border: 1.5px solid #333399;
+  border-radius: 4px;
+  cursor: pointer;
   overflow: hidden;
   outline: none;
-  border-radius: 15px;
-  cursor: pointer;
-  background: #ecae45;
-}
-.common-btn:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background: #342a64;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
   transition: all 0.3s ease-in-out;
-  color: #fff;
 }
-.common-btn:hover {color: #fff !important; border:0px !important;}
-.common-btn:hover span {color: #fff !important;}
-.common-btn:hover:before {transform:scaleX(1);}
+.common-btn:hover {background: #CC3333; border-color: #CC3333;}
+.btn-outline-blue {background: transparent; border: 1.5px solid #ADADD6; color: #333399;}
+.btn-outline-white {background: transparent; border: 1.5px solid #fff; color: #333399;}
+.btn-outline-blue:hover, .btn-outline-white:hover {background: #FAEBEB; border: 1.5px solid #EBADAD;}
+.btn-outline-blue:hover {color: #CC3333;}
+.btn-outline-white:hover {color: #EBADAD;}
+.btn-red {background: #CC3333; border-color: #CC3333;}
+.btn-red:hover {background: #B82E2E; border-color: #B82E2E;}
+
 .contact-box img {width: 1.25vw; margin-right: 4px;}
 .contact-box a {font-size: 0.938vw; line-height: 1.134vw; text-decoration: underline;}
 .contact-box a:hover {transition: all 0.5s ease-in-out; color: #393939;}
@@ -288,30 +279,74 @@ footer .btm-strip {padding: 41px 7.292vw 33px;}
   height: 4.167vw;
   width: 4.167vw;
   aspect-ratio: 1 / 1;
+  background: #fff;
 }
 #float-btn a img {width: 1.667vw; height: 1.667vw; aspect-ratio: 1 / 1;}
 
 
 .heading {
-  font-size: 45px;
-  font-weight: 700;
-  color: #342A63;
-  margin-bottom: 25px;
+  font-family: 'Montserrat';
+  font-size: 2.5vw;
+  font-weight: 600;
+  line-height: 3.047vw;
+  color: #191919;
 }
 .subheading {
-  color: #706C7C;
   position: relative;
-  padding-left: 60px;
+  font-size: 0.938vw;
+  font-weight: 500;
+  line-height: 1.134vw;
+  color: #696969;
+  text-transform: uppercase;
 }
-.subheading:before {
+.section-title {padding-left: 22px; border-left: 4px solid #CC3333;}
+
+/*Homepage*/
+.main-wrapper:before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-image: url(../images/left-line.svg);
+  background-size: cover;
   position: absolute;
-  content: "";
-  width: 50px;
-  height: 2px;
-  left: 0px;
-  top: 10px;
-  background-color: #ECAE29;
+  left: 13.438vw;
+  top: 0;
 }
+.mid-line {position: relative;}
+.mid-line:before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-image: url(../images/left-line.svg);
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sectionf {height: 100vh;}
+#clients {padding: 5.052vw 14.583vw;}
+#clients .client-slider {margin-top: 1.667vw;}
+.owl-prev, .owl-next {margin: 0 !important; padding: 0 !important; background: transparent !important;}
+.owl-theme .owl-nav {margin-top: 1.667vw !important; display: flex; column-gap: 12px; justify-content: center;}
+.owl-theme .owl-nav img {width: 2.917vw;}
+.section-title .subheading {margin-bottom: 8px;}
+.section-fifty {display: flex;}
+.left-sec {padding-left: 13.542vw; width: 50%;}
+#testimonials .left-sec {padding-top: 5.469vw;}
+#testimonials .testimonial-sec {padding: 4.219vw 7.618vw 2.747vw 7.618vw; width: 50%;}
+#testimonials .testimonial-sec .quote-ico {width: 2.119vw; margin-bottom: 10px;}
+#testimonials .testimonial-sec p {font-size: 1.25vw; line-height: 1.513vw; margin-bottom: 1.25vw; color: #191919;}
+#testimonials .testimonail-wrapp img {width: 3.542vw; margin-right: 1.25vw;}
+#testimonials .testimonail-wrapp h4 {font-size: 1.458vw; line-height: 1.778vw; font-family: 'Montserrat'; margin-bottom: 8px; color: #05050F;}
+#testimonials .testimonail-wrapp p {font-size: 0.938vw; line-height: 1.143vw; font-family: 'Montserrat'; margin-bottom: 0; color: #696969;}
+#testimonials .owl-theme .owl-nav {justify-content: flex-end;}
+
+
+
+
+/*CTA*/
+#cta {padding: 2.083vw 0; margin-bottom: 112px;}
+#cta p {margin: 0 4.271vw 0 0; font-size: 1.458vw; line-height: 1.765vw;}
 
 @media (max-width: 991px) {
   .tab-content>.tab-pane {
