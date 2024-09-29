@@ -11,4 +11,4 @@
 <link href="./css/animate.min.css" media="all" rel="stylesheet"/>
 <link href="./css/aos.css" media="all" rel="stylesheet"/>
 <link href="./css/svg-style.css" media="all" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
