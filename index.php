@@ -349,7 +349,7 @@
                navText: ['<img src="images/arrow_circle_left.svg">','<img src="images/arrow_circle_right.svg">'],
                dots:false,
                loop:true,
-               autoplay:false,
+               autoplay:true,
                smartSpeed:1000,
                autoplayTimeout:3000,
                responsive:{
@@ -367,7 +367,7 @@
                navText: ['<img src="images/arrow_circle_left.svg">','<img src="images/arrow_circle_right.svg">'],
                dots:false,
                loop:true,
-               autoplay:false,
+               autoplay:true,
                smartSpeed:1000,
                autoplayTimeout:3000
             });
