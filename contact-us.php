@@ -8,21 +8,69 @@
   </head>
   <body>
     <?php include("header.php"); ?>
-    <section class="breadcum">
-      <img src="images/contact-banner.webp" class="img-fluid w-100 main-img" alt="contact-breadcum">
-      <div class="container breadcum_container">
-        <div class="caption-heading">
-          <h1 class="f-black">Contact Us</h1>
-        </div>
-        <div class="container breadcum-container">
-          <div class="breadcum_list">
-            <a href="index.php" class="f-regular text-white">Home</a>
-            <span class="slash text-white">></span>
-            <span class="text-white f-regular">Contact Us</span>
+    <section class="page-container">
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <div class="sidebar" id="sidebar">
+            <a href="/">
+              <img src="images/arrow_circle_left.svg" class="img-fluid" alt="back arrow">
+              Contact Us
+            </a>
+          </div>
+          <div class="contact-wrapper mid-line">
+            <div class="d-flex map-form">
+              <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.237037126189!2d72.86832109470754!3d19.036524495648795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf33605539bf%3A0xefeec1461c47f386!2sTruck%20Terminal%20Rd%2C%20Sion%2C%20Mumbai%2C%20Maharashtra%20400037!5e0!3m2!1sen!2sin!4v1727871722363!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="form-wrapper">
+                <div class="section-title">
+                  <h2 class="heading">Leave us a message</h2>
+                </div>
+                <div class="message-div">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control f-light" id="txtFirstName1" required pattern="[A-Za-z A-Za-z]{1,}" title="Please enter only letters" maxlength="50" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="phone" class="form-control f-light" required minlength="10" maxlength="10" pattern="[0-9]{10}" title="Please enter only digits" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" placeholder="Contact Number"> 
+                    </div>
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control f-light emailid" required placeholder="Email Id">
+                      <p class="errors">Please Enter Valid Email Address</p>
+                    </div>
+                    <div class="form-group select">
+                      <select name="service" class="form-control" required>
+                        <option value="" hidden>Services</option>
+                        <option>Road Transportation</option>
+                        <option>Logistics Consultancy</option>
+                        <option>Man Power Supply</option>
+                        <option>Import & Export</option>
+                        <option>Infra Projects - Transportation & Consultancy</option>
+                        <option>Container freight station (CFS)</option>
+                        <option>Logistic Management</option>
+                        <option>Port Handling</option>
+                        <option>NVOCC</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control msg" name="message" rows="2" id="contactmsg" placeholder="Message" onpaste="return false;" maxlength="140"></textarea>
+                      <p class="errors" id="msg-error">Emails, URLs &amp; Special characters are not allowed</p>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="common-btn w-100" id="form-submit">Send Message</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex address-wrapp">
+              
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <?php include("footer.php"); ?>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript">

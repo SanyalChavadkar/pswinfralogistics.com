@@ -621,3 +621,12 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   border-radius: 4px;
   transform: translateX(-50%);
 }
+
+/*contact page*/
+.contact-wrapper {padding-left: 2.083vw;}
+.map-wrapper {width: 26.198vw; height: 38.021vw;}
+.map-form {margin-top: 7.344vw; align-items: flex-end;}
+.form-wrapper {padding-left: 2.5vw;}
+.map-form .message-div {margin-left: 0; margin-top: 1.771vw;}
+.map-form .message-div button {margin-top: 1.771vw;}
+.address-wrapp {margin: 3.366vw 0 3.958vw;}

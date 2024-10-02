@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.jpg">
 <link href="./css/bootstrap.min.css" media="all" rel="stylesheet">
 <link href="./css/bootstrap-custom.css" media="all" rel="stylesheet">
 <link href="./css/media.css" media="all" rel="stylesheet">
