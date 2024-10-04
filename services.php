@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row flex-nowrap vh-100">
           <div class="sidebar" id="sidebar">
-            <a href="/">
+            <a href="index.php">
               <img src="images/arrow_circle_left.svg" class="img-fluid" alt="back arrow">
               Services
             </a>

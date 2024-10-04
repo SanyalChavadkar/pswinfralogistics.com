@@ -256,7 +256,7 @@ footer .btm-strip {padding: 41px 7.292vw 33px;}
 
 .contact-box img {width: 1.25vw; margin-right: 4px;}
 .contact-box a {font-size: 0.938vw; line-height: 1.134vw; text-decoration: underline;}
-.contact-box a:hover {transition: all 0.5s ease-in-out; color: #393939;}
+.contact-box a:hover, .single-addrs a:hover {transition: all 0.5s ease-in-out; color: #CC3333;}
 #backtotop {
   position: absolute;
   right: 8.333vw;
@@ -623,10 +623,17 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 }
 
 /*contact page*/
-.contact-wrapper {padding-left: 2.083vw;}
+.contact-wrapper {padding-left: 2.083vw; width: 74.479%;}
 .map-wrapper {width: 26.198vw; height: 38.021vw;}
 .map-form {margin-top: 7.344vw; align-items: flex-end;}
 .form-wrapper {padding-left: 2.5vw;}
 .map-form .message-div {margin-left: 0; margin-top: 1.771vw;}
 .map-form .message-div button {margin-top: 1.771vw;}
-.address-wrapp {margin: 3.366vw 0 3.958vw;}
+.address-wrapp {margin: 3.366vw 0 3.958vw; width: 56.25vw; justify-content: space-between;}
+.single-addrs {display: flex;}
+.single-addrs .cont-icon {margin-right: 0.833vw;}
+.single-addrs .cont-icon img {height: 2.813vw; max-width: unset;}
+.single-addrs h3 {font-size: 0.938vw; line-height: 1.134vw; color: #191919; margin-bottom: 0.417vw; text-transform: capitalize;}
+.single-addrs p, .single-addrs a {font-size: 0.729vw; line-height: 1.042vw; margin-bottom: 0;}
+.single-addrs p {color: #4B4B4B;}
+.single-addrs a {color: #333399; text-decoration: underline;}

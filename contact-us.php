@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row flex-nowrap">
           <div class="sidebar" id="sidebar">
-            <a href="/">
+            <a href="index.php">
               <img src="images/arrow_circle_left.svg" class="img-fluid" alt="back arrow">
               Contact Us
             </a>
@@ -24,7 +24,7 @@
               </div>
               <div class="form-wrapper">
                 <div class="section-title">
-                  <h2 class="heading">Leave us a message</h2>
+                  <h1 class="heading">Leave us a message</h1>
                 </div>
                 <div class="message-div">
                   <form>
@@ -64,7 +64,33 @@
               </div>
             </div>
             <div class="d-flex address-wrapp">
-              
+              <div class="single-addrs">
+                <div class="cont-icon">
+                  <img src="images/marker.svg" class="img-fluid" alt="address marker">
+                </div>
+                <div class="cont-icon">
+                  <h3 class="f-semibold">locate us</h3>
+                  <p class="f-regular">PSW Infra Logistics, Near Wadala RTO, <br>Wadala East, Mumbai 400037</p>
+                </div>
+              </div>
+              <div class="single-addrs">
+                <div class="cont-icon">
+                  <img src="images/phone.svg" class="img-fluid" alt="phone icon">
+                </div>
+                <div class="cont-icon">
+                  <h3 class="f-semibold">contact number</h3>
+                  <a href="tel:+91 74000 66629" class="f-semibold">+91 74000 66629</a>
+                </div>
+              </div>
+              <div class="single-addrs">
+                <div class="cont-icon">
+                  <img src="images/email.svg" class="img-fluid" alt="email icon">
+                </div>
+                <div class="cont-icon">
+                  <h3 class="f-semibold">email address</h3>
+                  <a href="mailto:pswinfralogistics@gmail.com" class="f-semibold">pswinfralogistics@gmail.com</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
