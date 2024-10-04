@@ -5,6 +5,10 @@
     <title>Services | PSW</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta property="og:title" content="Services | PSW">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://uat.pswinfralogistics.com/images/favicon.jpg">
   </head>
   <body class="about-page">
     <?php include("header.php"); ?>

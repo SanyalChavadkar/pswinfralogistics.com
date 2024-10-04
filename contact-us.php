@@ -5,6 +5,10 @@
     <title>Contact Us | PSW</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta property="og:title" content="Contact Us | PSW">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://uat.pswinfralogistics.com/images/favicon.jpg">
   </head>
   <body>
     <?php include("header.php"); ?>
