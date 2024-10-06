@@ -89,7 +89,7 @@ function formatter (value) {
   return value.toFixed(0).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
 }
 var a = 0;
-$(window).scroll(function() {
+// $(window).scroll(function() {
   if($('.counter').length > 0) {
     var oTop = $('.counter').offset().top - window.innerHeight;
     if (a == 0 && $(window).scrollTop() > oTop) {
@@ -114,7 +114,7 @@ $(window).scroll(function() {
       a = 1;
     }
   }
-});
+// });
 
 //  // smart sticky header
 //  (function(window, document, undefined) {

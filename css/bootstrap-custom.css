@@ -607,7 +607,7 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   justify-content: center;
   overflow: hidden;
 }
-.service-details .accordion-body .img-box video, #services .accordion-body .img-box video {transform: scale(1.01);}
+.service-details .accordion-body .img-box video, #services .accordion-body .img-box video {transform: scale(1.02);}
 .service-details .accordion-body h4, .service-details .accordion-body p { margin: 0 auto; color: #FCFCFC;}
 .service-details .accordion-body h4 {
   font-family: 'Montserrat';
@@ -649,3 +649,122 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 .single-addrs p, .single-addrs a {font-size: 0.729vw; line-height: 1.042vw; margin-bottom: 0;}
 .single-addrs p {color: #4B4B4B;}
 .single-addrs a {color: #333399; text-decoration: underline;}
+
+/*about page*/
+#sidebar #sticky-sidebar {position: fixed; top: 16.224vw;}
+#about-page.main-wrapper:before {display: none;}
+#about-page #sidebar ul {margin-top: 2.5vw; padding-left: 2.5vw;}
+#about-page #sidebar li a {
+  font-weight: 400;
+  font-family: 'Inter';
+  font-size: 0.833vw;
+  line-height: 1.563vw;
+  display: block;
+  margin-bottom: 0.417vw;
+  color: #CACACA;
+}
+#about-page #sidebar li a.active {font-weight: 500; color: #323232;}
+#about-page #about-psw .about-overview {display: flex; align-items: flex-end; column-gap: 3.333vw;}
+#about-page #about-psw img {width: 27.76vw;}
+#about-page .about-overview-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vw;
+  margin-right: 6.9vw;
+}
+#about-page .about-overview-content p, #about-page .counter p {
+  font-family: 'Inter';
+  font-size: 0.938vw;
+  font-weight: 400;
+  line-height: 1.563vw;
+  padding: 0 3.646vw;
+  margin-bottom: 0;
+}
+.counter {
+  padding-left: 3.646vw;
+  margin-top: 2.083vw;
+  margin-right: 7.396vw;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.917vw;
+}
+.counter .single-count {width: -webkit-fill-available;}
+#about-page .counter span {
+  font-family: 'Inter';
+  font-size: 3.333vw;
+  font-weight: 300;
+  line-height: 3.333vw;
+  border-bottom: 1.5px solid #4B4B4B;
+  display: block;
+  padding-bottom: 0.417vw;
+  margin-bottom: 0.417vw;
+}
+#about-page .counter p {padding: 0;}
+#about-page .about-wrapper {width: calc(100% - 25.521%);}
+#about-page .section {padding-top: 7.292vw;}
+.vm-wrapp {margin-bottom: 8.333vw;}
+.vm-wrapp:nth-child(2) {margin-bottom: 8.333vw;}
+#about-page .section-title {padding: 0.521vw 0 0.521vw 3.333vw; border-left: 4px solid #CC3333; margin-left: 2px; margin-bottom: 1.667vw;}
+#about-page .section-title h4 {
+  line-height: 1.778vw;
+  font-size: 1.458vw;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+.vm-wrapp p, #about-page p.f-regular {
+  padding-left: 3.646vw;
+  padding-right: 9.385vw;
+  font-family: 'Inter';
+  font-size: 1.146vw;
+  line-height: 1.771vw;
+}
+#about-page #why-psw .section-title h4, #about-page #why-psw p.f-regular {color: #fcfcfc;}
+#about-page p.f-regular {padding-right: 10.385vw;}
+#about-page .usp-wrapp {margin-top: 5vw; display: flex;}
+#about-page .single-usp {
+  width: auto;
+  height: auto;
+  padding: 0px 3.5vw;
+  text-align: center;
+  border-bottom: none !important;
+  border-right: 1px solid #5C5CAD;
+}
+#about-page .single-usp:last-child {border-right: none !important;}
+#about-page .single-usp p {
+  font-size: 0.938vw;
+  line-height: 1.143vw;
+  margin-top: 1.667vw;
+  margin-bottom: 0;
+}
+.core-values-wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3.333vw 5.208vw 3.333vw 3.333vw;
+  gap: 3.333vw 2.083vw;
+}
+.core-values-wrapp .single-values {flex: 1 1 calc((100% - 4.166vw) / 3); min-width: 0;}
+.core-values-wrapp .single-values span {
+  font-family: 'Inter';
+  font-size: 3.333vw;
+  font-weight: 300;
+  line-height: 2.396vw;
+  color: #CACACA;
+  margin-bottom: 0.833vw;
+  display: block;
+}
+.core-values-wrapp .single-values h5 {
+  font-family: 'Inter';
+  font-size: 1.146vw;
+  font-weight: 600;
+  line-height: 1.387vw;
+  color: #191919;
+  margin-bottom: 0.417vw;
+}
+.core-values-wrapp .single-values p {
+  font-family: 'Inter';
+  font-size: 0.833vw;
+  font-weight: 500;
+  line-height: 1.354vw;
+  color: #4B4B4B;
+  margin-bottom: 0;
+}

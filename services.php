@@ -255,7 +255,10 @@
       $('.btn.btn-link').attr('aria-expanded','false');
       $(hash+' button').attr('aria-expanded','true');
       $(hash+'-tab').addClass('show');
-      $('#myTabContent video').each(function() { this.pause(); });
+      $('#myTabContent video').each(function() {
+        this.pause();
+        this.currentTime = 0;
+      });
       $(sect).find('video').each(function() { this.play(); });
       $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
     });  

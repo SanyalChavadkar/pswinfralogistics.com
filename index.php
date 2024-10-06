@@ -335,7 +335,7 @@
                         </div>
                         <div class="message-img vh100 bg-accentblue position-relative">
                            <!-- <img src="images/message-container.svg" class="img-fluid" alt="About us"> -->
-                           <video width="100%" muted>
+                           <video width="100%" autoplay muted id="container-vid">
                               <source src="images/container-with-envolope-footer-sent.mp4" type="video/mp4">
                            </video>
                         </div>
@@ -392,8 +392,21 @@
             })
             $('a[data-bs-toggle="tab"]').on('click', function (e) {
                var sect = $(this).attr('href');
-               $('#myTabContent video').each(function() { this.pause(); });
+               $('#myTabContent video').each(function() {
+                  this.pause();
+                  this.currentTime = 0;
+               });
                $(sect).find('video').each(function() { this.play(); });
+            });
+
+            var container_video = $('#container-vid')[0];
+            container_video.addEventListener('loadedmetadata', function() {
+            var half = container_video.duration / 2;
+               container_video.addEventListener('timeupdate', function() {
+                  if (container_video.currentTime >= half) {
+                     container_video.pause();
+                  }
+               });
             });
          });
       </script>
