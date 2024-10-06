@@ -428,7 +428,7 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   height: inherit;
   padding-bottom: 8.95vw;
 }
-#services .accordion-body .img-box {margin-bottom: 3.333vw;}
+#services .accordion-body .img-box {margin: 0 auto 3.333vw; width: 37.5vw; overflow: hidden;}
 #services .accordion-body h4 {
   font-family: 'Montserrat';
   font-size: 1.458vw;
@@ -498,7 +498,15 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   font-weight: 600;
   line-height: 1.397vw;
 }
-.message-img img {width: 37.468vw; margin-left: 6.667vw;}
+/*.message-img img {width: 37.468vw; margin-left: 6.667vw;}*/
+.message-img img {width: 37vw; margin-left: 4vw;}
+/*.message-img video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}*/
 .message-div {margin: 2.969vw 0 0 26px; width: 27.813vw;}
 .form-control {
   border: 1px solid #CACACA;
@@ -591,11 +599,15 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 
 .service-details {width: 43.906%; padding-top: 12.396vw; padding-left: 2.813vw; padding-right: 3.646vw;}
 .service-details .accordion-body .img-box {
-  min-height: 17.292vw;
+  /*min-height: 17.292vw;*/
+  width: 37.5vw;
+  margin: 0 auto 1.333vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+.service-details .accordion-body .img-box video, #services .accordion-body .img-box video {transform: scale(1.01);}
 .service-details .accordion-body h4, .service-details .accordion-body p { margin: 0 auto; color: #FCFCFC;}
 .service-details .accordion-body h4 {
   font-family: 'Montserrat';

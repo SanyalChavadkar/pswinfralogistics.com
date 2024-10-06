@@ -70,7 +70,10 @@
                                  <div id="road-transportation-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
                                     <div class="accordion-body">
                                        <div class="img-box">
-                                          <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation">
+                                          <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
+                                          <video width="100%" autoplay muted>
+                                             <source src="images/road-transportation.mp4" type="video/mp4">
+                                          </video>
                                        </div>
                                        <h4 class="f-semibold">Road Transportation</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
@@ -94,7 +97,10 @@
                                  <div id="logistics-consultancy-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                                     <div class="accordion-body">
                                        <div class="img-box">
-                                          <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation">
+                                          <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
+                                          <video width="100%" autoplay muted>
+                                             <source src="images/logistics-consultancy.mp4" type="video/mp4">
+                                          </video>
                                        </div>
                                        <h4 class="f-semibold">Logistics Consultancy</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
@@ -118,7 +124,10 @@
                                  <div id="man-power-supply-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                                     <div class="accordion-body">
                                        <div class="img-box">
-                                          <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation">
+                                          <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
+                                          <video width="100%" autoplay muted>
+                                             <source src="images/man-power-supply.mp4" type="video/mp4">
+                                          </video>
                                        </div>
                                        <h4 class="f-semibold">Man Power Supply</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
@@ -324,8 +333,11 @@
                               </form>
                            </div>
                         </div>
-                        <div class="message-img vh100 bg-accentblue">
-                           <img src="images/message-container.svg" class="img-fluid" alt="About us">
+                        <div class="message-img vh100 bg-accentblue position-relative">
+                           <!-- <img src="images/message-container.svg" class="img-fluid" alt="About us"> -->
+                           <video width="100%" muted>
+                              <source src="images/container-with-envolope-footer-sent.mp4" type="video/mp4">
+                           </video>
                         </div>
                      </div>
                   </div>
@@ -378,6 +390,11 @@
             $('select').on('click', function(){
                $(this).parent().toggleClass('active');
             })
+            $('a[data-bs-toggle="tab"]').on('click', function (e) {
+               var sect = $(this).attr('href');
+               $('#myTabContent video').each(function() { this.pause(); });
+               $(sect).find('video').each(function() { this.play(); });
+            });
          });
       </script>
    </body>

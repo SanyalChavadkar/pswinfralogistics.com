@@ -63,7 +63,10 @@
                 <div id="road-transportation-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/road-transportation.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Road Transportation</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -77,7 +80,10 @@
                 <div id="logistics-consultancy-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Logistics Consultancy">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Logistics Consultancy"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/logistics-consultancy.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Logistics Consultancy</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -91,7 +97,10 @@
                 <div id="man-power-supply-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Man Power Supply">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Man Power Supply"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/man-power-supply.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Man Power Supply</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -105,7 +114,10 @@
                 <div id="import-export-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingFour" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Import & Export">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Import & Export"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/import-and-export.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Import & Export</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -119,7 +131,10 @@
                 <div id="infra-projects-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingFive" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/infra-projects.svg" class="img-fluid" alt="Infra Projects - Transportation & Consultancy">
+                      <!-- <img src="images/infra-projects.svg" class="img-fluid" alt="Infra Projects - Transportation & Consultancy"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/infra-projects.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Infra Projects - Transportation & Consultancy</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -133,7 +148,10 @@
                 <div id="cfs-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingSix" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Container freight station (CFS)">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Container freight station (CFS)"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/cfs.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Container freight station (CFS)</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -147,7 +165,10 @@
                 <div id="logistic-management-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingSeven" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/logistic-management.svg" class="img-fluid" alt="Logistic Management">
+                      <!-- <img src="images/logistic-management.svg" class="img-fluid" alt="Logistic Management"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/logistic-managment.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Logistic Management</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -161,7 +182,10 @@
                 <div id="port-handling-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingEight" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/home-road-transport.svg" class="img-fluid" alt="Port Handling">
+                      <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Port Handling"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/port-handling.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">Port Handling</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -175,7 +199,10 @@
                 <div id="nvocc-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingNine" data-bs-parent="#myTabContent">
                   <div class="accordion-body p-0 text-center">
                     <div class="img-box">
-                      <img src="images/nvocc.svg" class="img-fluid" alt="NVOCC">
+                      <!-- <img src="images/nvocc.svg" class="img-fluid" alt="NVOCC"> -->
+                      <video width="100%" autoplay muted>
+                        <source src="images/nvocc.mp4" type="video/mp4">
+                      </video>
                     </div>
                     <h4 class="f-semibold">NVOCC</h4>
                     <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
@@ -228,6 +255,8 @@
       $('.btn.btn-link').attr('aria-expanded','false');
       $(hash+' button').attr('aria-expanded','true');
       $(hash+'-tab').addClass('show');
+      $('#myTabContent video').each(function() { this.pause(); });
+      $(sect).find('video').each(function() { this.play(); });
       $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
     });  
 
