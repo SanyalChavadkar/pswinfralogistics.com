@@ -434,7 +434,7 @@
       }
 
       $(window).on('scroll', function() {
-        var footer = $('footer');
+        var footer = $('.main-footer');
         var scrollPosition = $(window).scrollTop() + $(window).height();
         var footerPosition = footer.offset().top;
 
