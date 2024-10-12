@@ -79,19 +79,19 @@
                         <p class="f-regular">PSW Infra Logistics stands out due to its abundant resources, well-structured framework, and a dedicated team, all of which synergize to provide prompt and dependable delivery services. The hallmark of our services is our commitment to punctuality and reliability, traits that have earned us significant praise and client satisfaction. We take pride in consistently achieving on-time delivery of goods to their designated destinations. We attribute our ability to deliver safe cargo transportation services to our proficient team. Comprising skilled laborers and drivers, our team is dedicated to meeting client requirements with precision and care, ensuring goods remain undamaged throughout handling and transit.</p>
                         <div class="usp-wrapp">
                            <div class="single-usp">
-                              <img src="images/safe-reliable.svg" class="img-fluid" alt="Safe & Reliable">
+                              <img src="images/safe-reliable.png" class="img-fluid" alt="Safe & Reliable">
                               <p>Safe & Reliable</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/logistical-expert.svg" class="img-fluid" alt="Logistical Expertise.">
+                              <img src="images/logistical-expert.png" class="img-fluid" alt="Logistical Expertise.">
                               <p>Logistical Expertise.</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/customer-support.svg" class="img-fluid" alt="Customer Support">
+                              <img src="images/customer-support.png" class="img-fluid" alt="Customer Support">
                               <p>Customer Support</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/efficient.svg" class="img-fluid" alt="Efficient & cost effective">
+                              <img src="images/efficient.png" class="img-fluid" alt="Efficient & cost effective">
                               <p>Efficient & cost effective</p>
                            </div>
                         </div>

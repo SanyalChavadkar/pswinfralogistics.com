@@ -16,10 +16,12 @@
       <div class="container-fluid">
         <div class="row flex-nowrap">
           <div class="sidebar" id="sidebar">
-            <a href="index.php">
-              <img src="images/arrow_circle_left.svg" class="img-fluid" alt="back arrow">
-              Contact Us
-            </a>
+            <div id="sticky-sidebar">
+              <a href="index.php">
+                <img src="images/arrow_circle_left.svg" class="img-fluid" alt="back arrow">
+                Contact Us
+              </a>
+            </div>
           </div>
           <div class="contact-wrapper mid-line">
             <div class="d-flex map-form">
@@ -31,7 +33,8 @@
                   <h1 class="heading">Leave us a message</h1>
                 </div>
                 <div class="message-div">
-                  <form>
+                  <form action="" method="post" id="contact-form">
+                    <input type="hidden" name="honeypot" class="d-none">
                     <div class="form-group">
                       <input type="text" name="name" class="form-control f-light" id="txtFirstName1" required pattern="[A-Za-z A-Za-z]{1,}" title="Please enter only letters" maxlength="50" placeholder="Name">
                     </div>
@@ -39,8 +42,8 @@
                       <input type="text" name="phone" class="form-control f-light" required minlength="10" maxlength="10" pattern="[0-9]{10}" title="Please enter only digits" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" placeholder="Contact Number"> 
                     </div>
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control f-light emailid" required placeholder="Email Id">
-                      <p class="errors">Please Enter Valid Email Address</p>
+                      <input type="email" name="email" class="form-control f-light" id="emailid" required placeholder="Email Id">
+                      <p class="errors" id="email-error">Please Enter Valid Email Address</p>
                     </div>
                     <div class="form-group select">
                       <select name="service" class="form-control" required>
@@ -61,7 +64,7 @@
                       <p class="errors" id="msg-error">Emails, URLs &amp; Special characters are not allowed</p>
                     </div>
                     <div class="form-group">
-                      <button type="submit" class="common-btn w-100" id="form-submit">Send Message</button>
+                      <button type="submit" name="consubmit" class="common-btn w-100" id="form-submit">Send Message</button>
                     </div>
                   </form>
                 </div>
@@ -103,107 +106,128 @@
 
     <?php include("footer.php"); ?>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script type="text/javascript">
-       $(document).ready(function(){
-           $('#contact_form').on('submit', function(e) {
-               if(grecaptcha.getResponse() == "") {
-                   e.preventDefault();
-                   alert("Please check the captcha");
-               }
-           });
-       });
-    </script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function(){
+        $('#contact_form').on('submit', function(e) {
+          if(grecaptcha.getResponse() == "") {
+            e.preventDefault();
+            alert("Please check the captcha");
+          }
+        });
+      });
+    </script> -->
     <script type="text/javascript">
     // input type name field script
     $(function () {
-    $('#txtFirstName1').keydown(function (e) {
-    if (e.ctrlKey || e.altKey) {
-    e.preventDefault();
-    } else {
-    var key = e.keyCode;
-    if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
-    e.preventDefault();
-    }
-    }
-    });
+      $('#txtFirstName1').keydown(function (e) {
+        if (e.ctrlKey || e.altKey) {
+          e.preventDefault();
+        } else {
+          var key = e.keyCode;
+          if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+            e.preventDefault();
+          }
+        }
+      });
     }); 
     </script>
-      <script type="text/javascript">
-         $(document).ready(function(){
-            $('#contact-form').on('submit', function(e) {
-               if(grecaptcha.getResponse() == "") {
-                  e.preventDefault();
-                  alert("Please check the captcha");
-               } 
-            });
-         
-            // $.validate({
-            //     form: ".quote-validation",
-            // });
-         });
-      </script>
-      <script type="text/javascript">
-         $(document).ready(function(){
-          emailstatus = '';
-          msgstatus = '';
-          $('.emailid').on('input', function() {
-            var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,10})+$/;   
-            var emailText = $(".emailid").val();
-            if (emailFilter.test(emailText)) {
-              // $(".email").css({
-              //   "color" : "#609D29"
-              // });
-              window.emailstatus = true; 
-              $(".email-error").hide();
-            }
-            else {
-              // $(".email").css({
-              //   "color" : "#CE3B46"
-              // });
-              window.emailstatus = false; 
-              $(".email-error").show();
-            }
-            valfield();
-          });
-         
-         // textarea validation
-          $("#msg-error").hide();
-          var allowed = 0; // how many times url can be allowed
-          var urlregex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g; //match urls
-          var emailregex = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}\b/ig; //match emails
-          var specialregex = /[\'^Â£$%&*(){}@#~><>|=_+Â¬]/g; //match special characters
-         
-          $('#contactmsg').on('input', function() {
-            var textUrl = $(this).val().match(urlregex); // search url
-            var textArea = $(this).val().match(emailregex); // search email
-            var textChar = $(this).val().match(specialregex); // search special character
-            if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
-              window.msgstatus = false;
-              $("#msg-error").show();
-            } else {
-              window.msgstatus = true;
-              $("#msg-error").hide();
-            }
-            valfield();
-          });
-         
-          // button
-          function valfield(){
-            if(msgstatus !== '') {
-              if (emailstatus && msgstatus) {
-                $("#form-submit").prop("disabled", false);
-              } else {
-                $("#form-submit").prop("disabled", true);
-              }
-            } else {
-              if (emailstatus) {
-                $("#form-submit").prop("disabled", false);
-              } else {
-                $("#form-submit").prop("disabled", true);
-              }
-            }        
+    <script type="text/javascript">
+      $(document).ready(function(){
+        emailstatus = '';
+        msgstatus = '';
+        $('#emailid').on('input', function() {
+          var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,10})+$/;   
+          var emailText = $("#emailid").val();
+          if (emailFilter.test(emailText)) {
+            window.emailstatus = true; 
+            $("#email-error").hide();
           }
-         }); 
-      </script>
+          else {
+            window.emailstatus = false; 
+            $("#email-error").show();
+          }
+          valfield();
+        });
+         
+        // textarea validation
+        $("#msg-error").hide();
+        var allowed = 0; // how many times url can be allowed
+        var urlregex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g; //match urls
+        var emailregex = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}\b/ig; //match emails
+        var specialregex = /[\'^Â£$%&*(){}@#~><>|=_+Â¬]/g; //match special characters
+       
+        $('#contactmsg').on('input', function() {
+          var textUrl = $(this).val().match(urlregex); // search url
+          var textArea = $(this).val().match(emailregex); // search email
+          var textChar = $(this).val().match(specialregex); // search special character
+          if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
+            window.msgstatus = false;
+            $("#msg-error").show();
+          } else {
+            window.msgstatus = true;
+            $("#msg-error").hide();
+          }
+          valfield();
+        });
+         
+        // button
+        function valfield(){
+          if(msgstatus !== '') {
+            if (emailstatus && msgstatus) {
+              $("#form-submit").prop("disabled", false);
+            } else {
+              $("#form-submit").prop("disabled", true);
+            }
+          } else {
+            if (emailstatus) {
+              $("#form-submit").prop("disabled", false);
+            } else {
+              $("#form-submit").prop("disabled", true);
+            }
+          }        
+        }
+      });
+    </script>
+    <?php
+    if(isset($_POST['consubmit'])) {
+      $honeypot = $_POST['honeypot'];
+      if (empty($honeypot)) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $service = $_POST['service'];
+        // $enquiry = $_POST['enq_for'];
+        $message = $_POST['message'];
+
+        //if ((empty($_POST['name'])) || (empty($_POST['email'])) || (empty($_POST['contact'])) || (empty($_POST['message'])))
+        if ((empty($_POST['name'])) || (empty($_POST['email'])) || (empty($_POST['phone'])) || (empty($_POST['service']))) {
+          echo "<script>sweetAlert('All Fields are required...!');</script>";
+        } else {
+          $to = "laynasart27la@gmail.com";
+          $subject = "PSW Infra Logictics - Contact Form";
+
+          $message = '<table border="0"><tr><td><b>Name  :</b></td><td>' .$_POST['name']."</td></tr>";
+          $message .= '<tr><td><b>Email Id :</b></td><td>' .$_POST['email'] ."</td></tr>";
+          $message .= '<tr><td><b>Service :</b></td><td>' .$_POST['service'] ."</td></tr>";
+          $message .= '<tr><td><b>Contact Number :</b></td><td>' .$_POST['phone'] ."</td></tr>";
+          $message .= '<tr><td><b>Message :</b></td><td>' .$_POST['message'] ."</td></tr></table>";
+
+          $header = "From: contact<noreply@pswinfralogistics.com> \r\n";
+          $header .= "CC:pswinfralogistics@gmail.com \r\n";
+          $header .= "MIME-Version: 1.0\r\n";
+          $header .= "Content-type: text/html\r\n";
+
+          if(mail ($to,$subject,$message,$header)) {
+            // echo "<script>sweetAlert('Thank you ! <br> We will get back to you soon.');</script>";
+            echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
+          } else {
+            // echo "<script>sweetAlert('Message could not be sent...');</script>";
+            //header("location:contact-us.php");
+            echo "<script>alert('Message could not be sent...');</script>";
+          }
+        }
+      }
+    }
+    ?>
    </body>
 </html>

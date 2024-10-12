@@ -29,7 +29,7 @@
             </li>
           </ul>
         </div>
-        <a id="requestbtn" href="#">Request a quote</a>
+        <a id="requestbtn" href="request-a-quote.php">Request a quote</a>
       </nav>
     </div>
   </div>
