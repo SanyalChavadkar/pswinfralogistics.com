@@ -71,9 +71,10 @@
                                     <div class="accordion-body">
                                        <div class="img-box">
                                           <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
-                                          <video width="100%" autoplay muted>
-                                             <source src="images/road-transportation.mp4" type="video/mp4">
-                                          </video>
+                                          <!--<video width="100%" autoplay muted>-->
+                                          <!--   <source src="images/comp-5.mp4" type="video/mp4">-->
+                                          <!--</video>-->
+                                          <iframe src="data-4.html" class="w-100" style="height:332px; transform:scale(1);"></iframe>
                                        </div>
                                        <h4 class="f-semibold">Road Transportation</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>

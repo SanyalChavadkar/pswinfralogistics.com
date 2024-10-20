@@ -51,7 +51,7 @@
                                  </div>
                                  <div class="single-count">
                                     <span class="counter-value" data-count="25">00</span>
-                                    <p>Years of Experience</p>
+                                    <p>Years of Proficiency</p>
                                  </div>
                               </div>
                            </div>
