@@ -12,6 +12,7 @@
   </head>
   <body>
     <?php include("header.php"); ?>
+    <div class="main-wrapper" id="contact">
     <section class="page-container">
       <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -27,6 +28,35 @@
             <div class="d-flex map-form">
               <div class="map-wrapper">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.237037126189!2d72.86832109470754!3d19.036524495648795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf33605539bf%3A0xefeec1461c47f386!2sTruck%20Terminal%20Rd%2C%20Sion%2C%20Mumbai%2C%20Maharashtra%20400037!5e0!3m2!1sen!2sin!4v1727871722363!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="d-flex d-md-none address-wrapp">
+                <div class="single-addrs">
+                  <div class="cont-icon">
+                    <img src="images/marker.svg" class="img-fluid" alt="address marker">
+                  </div>
+                  <div class="cont-icon">
+                    <h3 class="f-semibold">locate us</h3>
+                    <p class="f-regular">PSW Infra Logistics, Near Wadala RTO, <br>Wadala East, Mumbai 400037</p>
+                  </div>
+                </div>
+                <div class="single-addrs">
+                  <div class="cont-icon">
+                    <img src="images/phone.svg" class="img-fluid" alt="phone icon">
+                  </div>
+                  <div class="cont-icon">
+                    <h3 class="f-semibold">contact number</h3>
+                    <a href="tel:+91 74000 66629" class="f-semibold">+91 74000 66629</a>
+                  </div>
+                </div>
+                <div class="single-addrs">
+                  <div class="cont-icon">
+                    <img src="images/email.svg" class="img-fluid" alt="email icon">
+                  </div>
+                  <div class="cont-icon">
+                    <h3 class="f-semibold">email address</h3>
+                    <a href="mailto:pswinfralogistics@gmail.com" class="f-semibold">pswinfralogistics@gmail.com</a>
+                  </div>
+                </div>
               </div>
               <div class="form-wrapper">
                 <div class="section-title">
@@ -70,7 +100,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex address-wrapp">
+            <div class="d-none d-md-flex address-wrapp">
               <div class="single-addrs">
                 <div class="cont-icon">
                   <img src="images/marker.svg" class="img-fluid" alt="address marker">

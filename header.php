@@ -29,7 +29,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact-us.php">Contact Us</a>
             </li>
-            <a href="request-a-quote.php" class="requestbtn d-none d-md-block d-lg-none">Request a quote</a>
+            <a href="request-a-quote.php" class="requestbtn d-block d-md-block d-lg-none">Request a quote</a>
           </ul>
         </div>
         <a id="requestbtn" href="request-a-quote.php" class="d-none d-md-none d-lg-block">Request a quote</a>

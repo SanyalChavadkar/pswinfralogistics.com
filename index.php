@@ -59,7 +59,7 @@
                                  </li>
                               </ul>
                            </div>
-                           <a href="#" class="common-btn">view all services</a>
+                           <a href="#" class="common-btn d-none d-md-block">view all services</a>
                         </div>
                         <div class="service-wrapper vh100 mid-line bg-accentblue">
                            <div class="tab-content accordion vh100" id="myTabContent">
@@ -95,7 +95,7 @@
                                  <h2 class="accordion-header d-lg-none" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#logistics-consultancy-tab" aria-expanded="false" aria-controls="collapseTwo">Logistics Consultancy</button>
                                  </h2>
-                                 <div id="logistics-consultancy-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+                                 <div id="logistics-consultancy-tab" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                                     <div class="accordion-body">
                                        <div class="img-box">
                                           <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
@@ -119,10 +119,10 @@
                                  </div>
                               </div>
                               <div class="tab-pane accordion-item" id="man-power-supply" role="tabpanel">
-                                 <h2 class="accordion-header d-lg-none" id="headingTwo">
+                                 <h2 class="accordion-header d-lg-none" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#man-power-supply-tab" aria-expanded="false" aria-controls="collapseTwo">Man Power Supply</button>
                                  </h2>
-                                 <div id="man-power-supply-tab" class="accordion-collapse collapse show d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+                                 <div id="man-power-supply-tab" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
                                     <div class="accordion-body">
                                        <div class="img-box">
                                           <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
@@ -146,6 +146,7 @@
                                  </div>
                               </div>
                            </div>
+                           <a href="#" class="common-btn d-block d-md-none">view all services</a>
                         </div>
                      </div>
                   </div>
@@ -187,19 +188,27 @@
                         </div>
                         <div class="usp-wrapp vh100 mid-line bg-accentblue">
                            <div class="single-usp">
-                              <img src="images/safe-reliable.png" class="img-fluid" alt="Safe & Reliable">
+                              <div class="usp-img">
+                                 <img src="images/safe-reliable.png" class="img-fluid" alt="Safe & Reliable">
+                              </div>
                               <p>Safe & Reliable</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/logistical-expert.png" class="img-fluid" alt="Logistical Expertise.">
+                              <div class="usp-img">
+                                 <img src="images/logistical-expert.png" class="img-fluid" alt="Logistical Expertise.">
+                              </div>
                               <p>Logistical Expertise.</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/customer-support.png" class="img-fluid" alt="Customer Support">
+                              <div class="usp-img">
+                                 <img src="images/customer-support.png" class="img-fluid" alt="Customer Support">
+                              </div>
                               <p>Customer Support</p>
                            </div>
                            <div class="single-usp">
-                              <img src="images/efficient.png" class="img-fluid" alt="Efficient & cost effective">
+                              <div class="usp-img">
+                                 <img src="images/efficient.png" class="img-fluid" alt="Efficient & cost effective">
+                              </div>
                               <p>Efficient & cost effective</p>
                            </div>
                         </div>
@@ -370,8 +379,8 @@
                smartSpeed:1000,
                autoplayTimeout:3000,
                responsive:{
-                  0:{items:1, smartSpeed:1000},
-                  375:{items:2},
+                  0:{items:3, smartSpeed:1000},
+                  375:{items:3},
                   600:{items:4},
                   1024:{items:5},
                   1366:{items:6}
