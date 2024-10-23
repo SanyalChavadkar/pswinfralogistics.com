@@ -20,7 +20,7 @@
                      <div class="section-fifty">
                         <div class="left-sec">
                            <div class="section-title position-relative">
-                              <h1 class="heading">Seamless <span class="accentred">logistics</span> solutions <br>for your business</h1>
+                              <h1 class="heading">Seamless <span class="accentred">logistics</span> solution <br>for your business</h1>
                            </div>
                            <div class="d-flex btn-box">
                               <a href="#" class="common-btn btn-red">request a quote</a>
@@ -74,7 +74,7 @@
                                           <!--<video width="100%" autoplay muted>-->
                                           <!--   <source src="images/comp-5.mp4" type="video/mp4">-->
                                           <!--</video>-->
-                                          <iframe src="data-4.html" class="w-100" style="height:332px; transform:scale(1);"></iframe>
+                                          <iframe src="road-transportation.html" class="w-100" style="height:332px; transform:scale(1);"></iframe>
                                        </div>
                                        <h4 class="f-semibold">Road Transportation</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
@@ -384,7 +384,7 @@
                navText: ['<img src="images/arrow_circle_left.svg">','<img src="images/arrow_circle_right.svg">'],
                dots:false,
                loop:true,
-               autoplay:true,
+               autoplay:false,
                smartSpeed:1000,
                autoplayTimeout:3000
             });

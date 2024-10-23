@@ -42,7 +42,7 @@
                   <a class="nav-link f-semibold" data-bs-toggle="tab" href="#infra-projects" role="tab">Infra Projects - Transportation & Consultancy <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link f-semibold" data-bs-toggle="tab" href="#cfs" role="tab">Container freight station (CFS) <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
+                  <a class="nav-link f-semibold" data-bs-toggle="tab" href="#cfs" role="tab">Container Freight Station (CFS) <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
                 </li>
                 <li class="nav-item" role="presentation">
                   <a class="nav-link f-semibold" data-bs-toggle="tab" href="#logistic-management" role="tab">Logistic Management <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
@@ -185,7 +185,65 @@
                       </video>
                     </div>
                     <h4 class="f-semibold">Import & Export</h4>
-                    <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
+                    <p class="f-regular">Import refers to the process of bringing goods or services into one country from another on other hand Export  is the opposite, involving sending goods or services from one country to another for sale. This can include anything from raw materials to finished products. Both processes are crucial for international trade, allowing countries to access products that may not be available locally or to sell surplus goods.<br>
+                    As a leading logistics company, we specialize in providing reliable, efficient, and cost-effective solutions tailored to meet the diverse needs of our clients. As a leading service provider, we offer a wide range of services, including Freight Forwarding, Custom Brokerage, Shipping Services, Logistic management etc. By leveraging these services, we streamline import and export operations, reduce risks, and expand the reach in global markets.</p>
+                    <h3>What We Offer:</h3>
+                    <ul>
+                      <li class="f-regular">Freight Forwarding<br>
+                        <ul>
+                          <li class="f-regular">Organize the transportation of goods via air, sea, or land.</li>
+                          <li class="f-regular">Handle logistics, including routing, tracking, and scheduling shipments.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Customs Brokerage<br>
+                        <ul>
+                          <li class="f-regular">Assist with customs clearance, ensuring all paperwork is completed correctly.</li>
+                          <li class="f-regular">Help navigate tariffs, duties, and regulations to avoid delays.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Shipping Services<br>
+                        <ul>
+                          <li class="f-regular">Provide the physical transportation of goods.</li>
+                          <li class="f-regular">Offer various shipping methods, including bulk shipping, container shipping, and express services.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Logistics Management<br>
+                        <ul>
+                          <li class="f-regular">Coordinate the entire supply chain, including warehousing and distribution.</li>
+                          <li class="f-regular">Optimize routes and processes to reduce costs and improve efficiency.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Trade Consulting<br>
+                        <ul>
+                          <li class="f-regular">Offer guidance on market entry strategies and compliance with local laws.</li>
+                          <li class="f-regular">Provide insights on tariffs, regulations, and potential trade partners.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Export Management<br>
+                        <ul>
+                          <li class="f-regular">Manage the export process for companies, handling sales, marketing, and logistics in foreign markets.</li>
+                          <li class="f-regular">Help identify potential buyers and facilitate communication.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Import/Export Agents<br>
+                        <ul>
+                          <li class="f-regular">Act as intermediaries, connecting buyers and sellers across borders.</li>
+                          <li class="f-regular">Facilitate negotiations and transactions, often earning a commission.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Insurance Services<br>
+                        <ul>
+                          <li class="f-regular">Offer insurance products to protect goods in transit.</li>
+                          <li class="f-regular">Help businesses mitigate risks associated with loss or damage during shipping.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">E-commerce Solutions<br>
+                        <ul>
+                          <li class="f-regular">Provide platforms for businesses to sell internationally.</li>
+                          <li class="f-regular">Offer payment processing, logistics support, and customer service solutions for cross-border.</li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -202,7 +260,30 @@
                       </video>
                     </div>
                     <h4 class="f-semibold">Infra Projects - Transportation & Consultancy</h4>
-                    <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
+                    <p class="f-regular">Infra Projects refer to large-scale construction and development projects that create and improve the foundational systems and services needed for a community or economy. We PSW, as a leading logistics company, we specialize in providing reliable, efficient, and cost-effective solutions tailored to meet the diverse needs of our clients. We offer a wide range of services, including Transportation Infrastructure, Utilities Infrastructure, Public Facilities, Energy Projects<br>
+                    These projects are essential for economic development, public safety, and overall quality of life.</p>
+                    <h3>What We Offer:</h3>
+                    <ul>
+                      <li class="f-regular">Transportation Services<br>
+                        <ul>
+                          <li class="f-regular">Heavy Haulage:  Transport oversized or heavy equipment and materials required for infrastructure projects. This includes cranes, concrete, steel beams, and other construction materials.</li>
+                          <li class="f-regular">Project Cargo Logistics: Manage the logistics of moving large and complex shipments that are critical to infrastructure projects, ensuring they arrive safely and on time.</li>
+                          <li class="f-regular">Multimodal Transportation: Utilize different modes of transport (road, rail, sea) to optimize delivery schedules and reduce costs, especially for remote or challenging locations.</li>
+                          <li class="f-regular">Route Planning: Conduct detailed route analysis to avoid obstacles, ensure compliance with regulations, and minimize delays, particularly for large loads.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Consultancy Services<br>
+                        <ul>
+                          <li class="f-regular">Logistics Planning: Assist in the development of comprehensive logistics plans tailored to the specific needs of the infrastructure project, including timelines, costs, and resource allocation.</li>
+                          <li class="f-regular">Supply Chain Management: Provide expertise in managing the supply chain for infrastructure projects, ensuring materials and equipment are available when needed without delays.</li>
+                          <li class="f-regular">Risk Management: Identify potential logistical challenges and develop strategies to mitigate risks related to transportation delays, equipment failures, or regulatory compliance.</li>
+                          <li class="f-regular">Cost Analysis: Offer cost-benefit analyses to help project managers understand the financial implications of different transportation and logistics options.</li>
+                          <li class="f-regular">Regulatory Compliance: Ensure that all transportation activities comply with local and international regulations, including permits for oversized loads, safety standards, and environmental regulations.</li>
+                          <li class="f-regular">Coordination with Stakeholders: Facilitate communication and coordination among various stakeholders involved in the project, including contractors, suppliers, and government agencies.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <p class="f-regular">By providing these transportation and consultancy services, PSW plays a crucial role in the successful execution of infrastructure projects, helping to ensure they are completed on time, within budget, and to the required quality standards.</p>
                   </div>
                 </div>
               </div>
@@ -250,7 +331,67 @@
                       </video>
                     </div>
                     <h4 class="f-semibold">Logistic Management</h4>
-                    <p class="f-regular">We handle your transports via road from point A to point B. As a National service provider, we maintain an extensive network structure on various parts of India for road freight transports. With years of experience in the Industry, we have developed the best Road Transportation service for our customers. We focus on timely delivery of goods as per customer needs and committed to providing complete satisfaction.</p>
+                    <p class="f-regular">Logistics Management involves the planning, implementation, and control of the flow and storage of goods, services, and related information from the point of origin to the point of consumption. At PSW, our goal is to meet customer requirements efficiently while minimizing costs. With years of experience and a deep understanding of industry trends, our team helps organizations to streamline their logistics operations to achieve greater efficiency, flexibility, and scalability.<br>
+                    we offer a wide range of services, including transportation, warehousing, inventory management, order fulfillment, and distribution.</p>
+                    <h3>What We Offer:</h3>
+                    <ul>
+                      <li class="f-regular">Transportation Management<br>
+                        <ul>
+                          <li class="f-regular">Coordinate the movement of goods via various modes (road, rail, air, sea).</li>
+                          <li class="f-regular">Optimize routes and select the most cost-effective carriers.</li>
+                          <li class="f-regular">Track shipments in real time to ensure timely delivery.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Warehousing Solutions<br>
+                        <ul>
+                          <li class="f-regular">Provide storage facilities for goods, managing inventory levels and storage conditions.</li>
+                          <li class="f-regular">Implement inventory control systems to track stock and automate reordering.</li>
+                          <li class="f-regular">Offer value-added services like packaging, labeling, and kitting.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Order Fulfillment<br>
+                        <ul>
+                          <li class="f-regular">Process customer orders efficiently, ensuring accuracy and timely shipping.</li>
+                          <li class="f-regular">Manage picking, packing, and shipping processes to meet service level agreements.</li>
+                          <li class="f-regular">Handle returns and exchanges effectively.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Inventory Management<br>
+                        <ul>
+                          <li class="f-regular">Monitor inventory levels to prevent stockouts and overstock situations.</li>
+                          <li class="f-regular">Utilize software and technology to forecast demand and optimize inventory turnover.</li>
+                          <li class="f-regular">Implement just-in-time inventory practices to reduce holding costs.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Supply Chain Management<br>
+                        <ul>
+                          <li class="f-regular">Coordinate with suppliers, manufacturers, and distributors to streamline the entire supply chain.</li>
+                          <li class="f-regular">Analyze data to identify inefficiencies and improve overall performance.</li>
+                          <li class="f-regular">Develop strategies to mitigate risks and adapt to market changes.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Technology Integration<br>
+                        <ul>
+                          <li class="f-regular">Utilize software solutions for logistics management, such as Transportation Management Systems (TMS) and Warehouse Management Systems (WMS).</li>
+                          <li class="f-regular">Implement tracking and tracing technologies for real-time visibility into the supply chain.</li>
+                          <li class="f-regular">Use analytics to inform decision-making and improve operational efficiency.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Consulting Services<br>
+                        <ul>
+                          <li class="f-regular">Provide expert advice on logistics strategies, cost reduction, and process improvement.</li>
+                          <li class="f-regular">Conduct audits to assess current logistics operations and identify areas for enhancement.</li>
+                          <li class="f-regular">Help businesses develop tailored logistics plans that align with their specific needs.</li>
+                        </ul>
+                      </li>
+                      <li class="f-regular">Customer Service Support<br>
+                        <ul>
+                          <li class="f-regular">Offer dedicated support to address customer inquiries and issues related to shipping and delivery.</li>
+                          <li class="f-regular">Provide clear communication regarding order status, delivery timelines, and any potential delays.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <p class="f-regular">By leveraging these logistics management services, we can enhance operational efficiency, reduce costs, and improve customer satisfaction in the supply chain.</p>
                   </div>
                 </div>
               </div>
@@ -320,68 +461,6 @@
 
   <?php include("footer.php"); ?>
   <script type="text/javascript">
-    // $(document).ready(function(){
-    //   function in_viewport(ele) {
-    //     var top_of_element = $(ele).offset().top;
-    //     var bottom_of_element = $(ele).offset().top + $(ele).outerHeight();
-    //     var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
-    //     var top_of_screen = $(window).scrollTop();
-    //     if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-    //       return true;
-    //     }
-    //     return false;
-    //   }
-    // });
-
-    $('a[data-bs-toggle="tab"]').on('click', function (e) {
-      var ele_top=$('.tab-content');
-      var sect = $(this).attr('href');
-      console.log(sect);
-
-      var hash=window.location.hash;
-      var ele=$('.nav-item a[href="'+hash+'"][data-bs-toggle="tab"]');
-      var ele_top=$('.tab-content');
-      if(ele.length > 0) {
-        // $('.nav-tabs .nav-link').removeClass('active');
-        // $('.nav-tabs .nav-link').attr('aria-selected','false');
-        // $(ele).addClass("active");
-        // $(ele).attr('aria-selected','true');
-        // $('.tab-content .tab-pane').removeClass("active show");
-        // $('.tab-pane'+hash).addClass("active show");
-        $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
-      }
-
-      if($('.tab-content .collapse').hasClass('show')) {
-        $('.tab-content .collapse').removeClass('show');
-      }
-
-      $('.btn.btn-link').attr('aria-expanded','false');
-      $(hash+' button').attr('aria-expanded','true');
-      $(hash+'-tab').addClass('show');
-      $('#myTabContent video').each(function() {
-        this.pause();
-        this.currentTime = 0;
-      });
-      $(sect).find('video').each(function() { this.play(); });
-      $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
-    });  
-
-    $(window).on( 'hashchange', function(e) {
-      var hash=window.location.hash;
-      var ele=$('.nav-item a[href="'+hash+'"][data-bs-toggle="tab"]');
-      var ele_top=$('.tab-content');
-      if(ele.length > 0) {
-        $('.nav-item .nav-link').removeClass('active');
-        $('.nav-item .nav-link').attr('aria-selected','false');
-        $(ele).addClass("active");
-        $(ele).attr('aria-selected','true');
-        $('.tab-content .tab-pane').removeClass("active show");
-        $('.tab-pane'+hash).addClass("active show in");
-        $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
-      }
-    });
-  </script>
-  <script type="text/javascript">
     $(document).ready(function() {
       var width=$(window).width();
       if (width > 767) {
@@ -399,8 +478,7 @@
             $("html, body").animate({ scrollTop: $(ele_top).offset().top - ($('.breadcum').height() - 100) }, 500);
           }
         });        
-      }
-      if (width < 1024) {
+      } else if (width < 1024) {
         var url = window.location.href;
         var index = url.indexOf("#");
         var hash = url.substring(index + 1);
@@ -414,9 +492,9 @@
             $('.tab-pane .accordion-collapse').removeClass('show');
             // console.log(elet.length);
             $(elet).addClass("active show out");
-            // console.log('#'+hash+'-tab .accordion-collapse');
+            console.log('#'+hash+'-tab .accordion-collapse');
             $('.tab-pane#'+hash+' button').attr('aria-expanded','true');
-            $('#'+hash+'-tab.accordion-collapse').addClass('show');
+            $('.tab-pane#'+hash+' .accordion-collapse').addClass('show');
             $("html, body").animate({ scrollTop: $(elet).offset().top - ($('.breadcum').height() - 160) }, 500);
           }
         });

@@ -41,13 +41,13 @@
                         <div class="req-form-wrapp">
                            <ul class="nav nav-tabs d-flex justify-content-between border-0" id="myTab" role="tablist">
                               <li class="nav-item" role="presentation">
-                                 <a class="nav-link active f-semibold border-0" data-bs-toggle="tab" href="#first-tab" role="tab"><span>1</span> <p>Personal Details</p></a>
+                                 <a class="nav-link active f-semibold border-0" href="#first-tab" role="tab"><span>1</span> <p>Personal Details</p></a>
                               </li>
                               <li class="nav-item" role="presentation">
-                                 <a class="nav-link f-semibold border-0" data-bs-toggle="tab" href="#second-tab" role="tab"><span>2</span> <p>Select Service Category</p></a>
+                                 <a class="nav-link f-semibold border-0" href="#second-tab" role="tab"><span>2</span> <p>Select Service Category</p></a>
                               </li>
                               <li class="nav-item" role="presentation">
-                                 <a class="nav-link f-semibold border-0" data-bs-toggle="tab" href="#third-tab" role="tab"><span>3</span> <p>Transportation Details</p></a>
+                                 <a class="nav-link f-semibold border-0" href="#third-tab" role="tab"><span>3</span> <p>Transportation Details</p></a>
                               </li>
                            </ul>
                            <form action="" method="post" id="contact-form" enctype="multipart/form-data">
@@ -201,46 +201,30 @@
                var targetTab = $(this).data('next') || '#second-tab';
                $('.nav-link[href="' + targetTab + '"]').tab('show');
             });
-            // $('#proceedtosecond').on('click', function() {
-            //    var parent = $(this).parent();
-            //    var allFilled = true;
-            //    parent.find('input[type="text"], input[type="file"], textarea').each(function() {
-            //       if ($(this).val() === '') {
-            //          allFilled = false;
-            //          return false;
-            //       }
-            //    });
-            //    if (allFilled) {
-            //       var targetTab = $(this).data('next') || '#second-tab';
-            //       $('.nav-link[href="' + targetTab + '"]').tab('show');
-            //    } else {
-            //       sweetAlert('Please fill out all fields before proceeding.');
-            //    }
-            // });
             $('#proceedtosecond').on('click', function() {
+               $('.req-form-wrapp ul li.nav-item').removeClass('active');
                var parent = $(this).parent();
                var allFilled = true;
-               var isPhoneValid = true; // Variable to track phone validity
+               var isPhoneValid = true;
 
-               // Check all text inputs, file inputs, and textareas
                parent.find('input[type="text"]').each(function() {
                   if ($(this).val() === '') {
                         allFilled = false;
-                        return false; // Break out of the loop
+                        return false;
                      }
                   });
 
-                  // Check the phone input validity
-                  var phoneInput = parent.find('input[name="phone"]'); // Adjust selector as needed
+                  var phoneInput = parent.find('input[name="phone"]');
                   if (phoneInput.length) {
-                  var phonePattern = new RegExp(phoneInput.attr('pattern')); // Use the pattern attribute
-                  isPhoneValid = phonePattern.test(phoneInput.val()); // Test the phone value against the pattern
+                  var phonePattern = new RegExp(phoneInput.attr('pattern'));
+                  isPhoneValid = phonePattern.test(phoneInput.val());
                }
 
-               // Proceed if all fields are filled and the phone number is valid
                if (allFilled && isPhoneValid) {
                   var targetTab = $(this).data('next') || '#second-tab';
-                  $('.nav-link[href="' + targetTab + '"]').tab('show');
+                  var activeTab = $('.nav-link[href="' + targetTab + '"]').tab('show');
+                  activeTab.parent().addClass('active');
+                  $('.nav-link[href="#first-tab"]').parent().addClass('done');
                } else {
                   if (!allFilled) {
                      sweetAlert('Please fill out all fields before proceeding.');
@@ -250,12 +234,15 @@
                }
             });
             $('#proceedtothird').on('click', function() {
-               // Check if at least one checkbox is checked across all checkbox containers
+               $('.req-form-wrapp ul li.nav-item').removeClass('active');
                var isChecked = $('.checkbox-container input[type="checkbox"]:checked').length > 0;
 
                if (isChecked) {
                   var targetTab = $(this).data('next') || '#third-tab';
                   $('.nav-link[href="' + targetTab + '"]').tab('show');
+                  var activeTab = $('.nav-link[href="' + targetTab + '"]').tab('show');
+                  activeTab.parent().addClass('active');
+                  $('.nav-link[href="#second-tab"]').parent().addClass('done');
                } else {
                   sweetAlert('Please check at least one service before proceeding.');
                }
