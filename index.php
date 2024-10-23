@@ -74,7 +74,7 @@
                                           <!--<video width="100%" autoplay muted>-->
                                           <!--   <source src="images/comp-5.mp4" type="video/mp4">-->
                                           <!--</video>-->
-                                          <iframe src="road-transportation.html" class="w-100" style="height:332px; transform:scale(1);"></iframe>
+                                          <iframe src="road-transportation.html" class="w-100" style="transform:scale(1);"></iframe>
                                        </div>
                                        <h4 class="f-semibold">Road Transportation</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
@@ -99,9 +99,10 @@
                                     <div class="accordion-body">
                                        <div class="img-box">
                                           <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Road Transportation"> -->
-                                          <video width="100%" autoplay muted>
+                                          <iframe src="logistic-consultancy.html" class="w-100" style="transform:scale(1);"></iframe>
+                                          <!-- <video width="100%" autoplay muted>
                                              <source src="images/logistics-consultancy.mp4" type="video/mp4">
-                                          </video>
+                                          </video> -->
                                        </div>
                                        <h4 class="f-semibold">Logistics Consultancy</h4>
                                        <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>

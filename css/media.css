@@ -187,7 +187,7 @@
     #services .nav-box {
         margin: 4.469vw 0 2.333vw 26px;
     }
-    #services iframe {height: auto !important;}
+    #services iframe, .service-details .accordion-body .img-box iframe {height: auto !important;}
     .left-sec {padding-top: 6vw; padding-bottom: 5vw;}
     .left-sec p br {display: none;}
     #why .usp-wrapp {padding: 2.313vw 3.531vw;}
@@ -204,6 +204,7 @@
     .req-form-wrapp ul li a span {padding-top: 1px; border-width: 1px;}
     .req-form-wrapp ul li a span:before {height: 7px; width: 10px;}
     .map-form {margin-top: 10.677vw;}
+    .navbar-expand-md .navbar-nav .nav-link.active:hover, .navbar-expand-md .navbar-nav .nav-link:hover {color: #CC3333 !important; background: #fff !important;}
 }
 @media(max-width: 767px) {
     .tab-content>.tab-pane, .accordion-header {
@@ -349,8 +350,8 @@
         padding-right: 20px;
     }
     #about .common-btn {text-align: center;}
-    #why .usp-wrapp {padding: 15.385vw 10.256vw; margin: 0 20px; width: calc(100% - (20px * 2)) !important;}
-    .single-usp {
+    #why .usp-wrapp, #why-psw .usp-wrapp {padding: 15.385vw 10.256vw; margin: 0 20px; width: calc(100% - (20px * 2)) !important;}
+    .single-usp, #about-page .single-usp {
         width: 100%;
         height: auto;
         justify-content: flex-start;
@@ -358,12 +359,13 @@
         border: none !important;
         margin-bottom: 11.282vw;
     }
-    .single-usp:last-child {margin-bottom: 0;}
-    .single-usp .usp-img {width: 18.462vw; text-align: center; margin-right: 8.205vw;}
-    .single-usp img {height: 14.103vw;}
-    .single-usp p {
+    .single-usp:last-child, #about-page .single-usp:last-child {margin-bottom: 0;}
+    .single-usp .usp-img, #about-page .single-usp .usp-img {width: 18.462vw; text-align: center; margin-right: 8.205vw;}
+    .single-usp img, #about-page .single-usp img {height: 14.103vw;}
+    .single-usp p, #about-page .single-usp p {
         font-size: 4.103vw;
         line-height: 5vw;
+        text-align: left;
         margin: 0;
         width: calc(100% - 18.462vw - 8.205vw);
     }
@@ -408,8 +410,10 @@
     #cta .common-btn {width: 100%; padding: 12px 20px; border-width: 2px;}
 
     /*gallrey*/
-    #gallery .row, #contact .row, .map-form {flex-direction: column;}
-    #gallery.main-wrapper:before, #gallery .req-form-wrapper .section-title, #contact.main-wrapper:before {display: none;}
+    #gallery .row, #contact .row, .map-form, #services-page .row, #about-page .row, #about-page #about-psw .about-overview,
+    #about-page .usp-wrapp, #request .row {flex-direction: column;}
+    #gallery.main-wrapper:before, #gallery .req-form-wrapper .section-title, #contact.main-wrapper:before, #services-page.main-wrapper:before,
+    #services, #about-page #sidebar ul {display: none;}
     #sidebar {width: 100%; padding: 8.205vw 20px;}
     #sidebar #sticky-sidebar, #sticky-tabs {position: relative; top: 0;}
     #sidebar a {font-size: 5.641vw; line-height: 26.82px;}
@@ -420,23 +424,79 @@
     .gallery-wrapper .gallery-single, .gallery-wrapper2 .gallery-single {width: 100% !important; height: 100% !important; margin-bottom: 6.154vw;}
     .gallery-wrapper .inner-wrapper1 .gallery-single img, .gallery-wrapper .inner-wrapper2 .gallery-single img,
     .gallery-wrapper2 .inner-wrapper1 .gallery-single img, .gallery-wrapper2 .inner-wrapper2 .gallery-single img {aspect-ratio: 130 / 123;}
-    .gallery-single p {
-        font-size: 4.103vw;
-        line-height: 4.964vw;
-        margin: 8px 20px 0;
-    }
+    .gallery-single p {font-size: 4.103vw; line-height: 4.964vw; margin: 8px 20px 0;}
 
     /*contact*/
     .contact-wrapper {padding: 0; width: 100%;}
     .map-form {margin: 0;}
     .map-wrapper {width: 100%; height: 64.872vw;}
-    .address-wrapp {padding: 5.128vw 20px 3.958vw; width: 100%; margin: 0; gap: 6.154vw; flex-direction: column;}
+    .address-wrapp {padding: 5.128vw 20px 0; width: 100%; margin: 0; gap: 6.154vw; flex-direction: column;}
     .single-addrs .cont-icon {margin-right: 4.103vw;}
     .single-addrs .cont-icon img {height: auto; width: 6.667vw;}
     .single-addrs h3 {font-size: 3.59vw; line-height: 16.94px; margin-bottom: 2.051vw;}
     .single-addrs p, .single-addrs a {font-size: 3.077vw; line-height: 5.128vw;}
     .single-addrs a {line-height: 3.723vw;}
+    .form-wrapper {margin: 12.308vw 20px 26.667vw; width: calc(100% - (20px * 2)); padding-left: 0;}
 
+    /*services*/
+    .service-details {width: 100%; padding: 10.256vw 20px 15.256vw;}
+    #services-page .service-details .accordion-button {background: transparent !important; color: #FCFCFC !important;}
+    #services-page .service-details .accordion-button:after {filter: invert(98%) sepia(100%) saturate(7%) hue-rotate(317deg) brightness(103%) contrast(98%);}
+    #services-page .service-details .accordion-button:not(.collapsed) {color: #EBADAD !important; border-color: #EBADAD;}
+    #services-page .service-details .accordion-button:not(.collapsed):after {filter: invert(98%) sepia(49%) saturate(1939%) hue-rotate(291deg) brightness(100%) contrast(83%);}
+    #services-page .tab-content {gap: 6.154vw; display: flex; flex-direction: column;}
+    #services-page .service-details .accordion-body p, #services-page .service-details .accordion-body ul,
+    #services-page .service-details .accordion-body h3 {width: calc(100% - 8px);}
+    #services-page .service-details .accordion-body h4 {font-size: 5.128vw; line-height: 6.251vw; margin-bottom: 6.154vw;}
+    #services-page .service-details .accordion-body h4:before {bottom: -3.077vw; width: 12.821vw;}
+    #services-page .service-details .accordion-body p, #services-page .service-details .accordion-body ul,
+    #services-page .service-details .accordion-body h3 {
+        width: calc(100% - 8px);
+        font-size: 4.103vw;
+        line-height: 6.154vw;
+        text-align: justify;
+    }
+    .service-details .accordion-body p, .service-details .accordion-body ul {margin: 0 0 20px;}
+    #services-page .service-details .accordion-body h3 {margin-bottom: 8px;}
+    .service-details .accordion-body .img-box, #about-page .about-wrapper, #about-page #about-psw img {width: 100%;}
+    .service-details .accordion-body .img-box iframe {height: auto !important;}
+
+    /*about*/
+    #about-page .about-wrapper, #about-page .section {padding: 0 !important;}
+    #about-page #about-psw img {height: 117.949vw; position: relative;}
+    #about-page .about-wrapper.mid-line:before {display: block !important; left: 18px;}
+    #about-page .section-title, #about-page .about-overview-content {margin: 8.205vw 20px 6.154vw; width: calc(100% - (20px * 2)); padding: 0 0 0 16px;}
+    #about-page .section-title h4 {line-height: 7.503vw; font-size: 6.154vw; padding: 10px 0;}
+    #about-page .about-overview-content {row-gap: 0; margin-right: 0; padding: 0;}
+    #about-page .about-overview-content p {padding: 0 12px; font-size: 4.103vw; line-height: 6.667vw; margin-bottom: 1rem;}
+    .counter {padding-left: 32px; column-gap: 16px; margin-right: 20px;}
+    #about-page .counter span {font-size: 12.308vw; line-height: 8.718vw; color: #8585C2; padding-bottom: 16px; margin-bottom: 8px;}
+    #about-page .counter p {font-size: 4.103vw; line-height: 7.692vw;}
+    #about-page .section#vision-mission {padding-top: 15.462vw !important;}
+    #about-page p.f-regular {
+        font-size: 4.103vw;
+        line-height: 6.667vw;
+        padding-left: 16px;
+        padding-right: 0;
+        width: calc(100% - (20px * 2));
+        margin: 0 20px;
+    }
+    .vm-wrapp {margin-bottom: 14.359vw;}
+    #about-page #why-psw {margin-top: 20.462vw !important; padding-top: 8px !important; position: relative;}
+    #about-page .single-usp {padding: 0;}
+    #core-values {margin-top: 18.205vw !important;}
+    .core-values-wrapp {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 20px 26.667vw 36px;
+        gap: 10.256vw;
+    }
+    .core-values-wrapp .single-values span {font-size: 12.308vw; line-height: 11.795vw; margin-bottom: 4.103vw;}
+    .core-values-wrapp .single-values h5 {font-size: 4.615vw; line-height: 5.585vw; margin-bottom: 8px;}
+    .core-values-wrapp .single-values p {font-size: 4.103vw; line-height: 6.667vw;}
+
+    /*request*/
+    #request .req-form-wrapper {width: 100%;}
 }
 @media(min-width:768px) {
 }

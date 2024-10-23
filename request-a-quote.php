@@ -13,7 +13,7 @@
    </head>
    <body class="about-page">
       <?php include("header.php"); ?>
-      <!-- <div class="main-wrapper" id="fullpage"> -->
+      <div class="main-wrapper" id="request">
          <section class="page-container">
             <div class="container-fluid">
                <div class="row flex-nowrap">
@@ -166,7 +166,7 @@
                </div>
             </div>
          </section>
-      <!-- </div> -->
+      </div>
       <?php include("footer.php"); ?>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>     
       <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
