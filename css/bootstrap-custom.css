@@ -667,7 +667,8 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 
 /*about page*/
 #sidebar #sticky-sidebar, #sticky-tabs {position: fixed; top: 16.224vw;}
-#about-page.main-wrapper:before {display: none;}
+#about-page.main-wrapper:before, #request.main-wrapper:before, #contact.main-wrapper:before, #gallery.main-wrapper:before,
+#services-page.main-wrapper:before {display: none;}
 #about-page #sidebar ul {margin-top: 2.5vw; padding-left: 2.5vw;}
 #about-page #sidebar li a {
   font-weight: 400;
