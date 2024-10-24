@@ -482,6 +482,7 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 #testimonials .testimonail-wrapp h4 {font-size: 1.458vw; line-height: 1.778vw; font-family: 'Montserrat'; margin-bottom: 8px; color: #05050F;}
 #testimonials .testimonail-wrapp p {font-size: 0.938vw; line-height: 1.143vw; font-family: 'Montserrat'; margin-bottom: 0; color: #696969;}
 #testimonials .owl-theme .owl-nav {justify-content: flex-end;}
+#testimonials .owl-theme .owl-nav img {filter: grayscale(0);}
 #why .usp-wrapp {padding: 7.313vw 4.531vw; display: flex; flex-wrap: wrap;}
 .single-usp {
   width: 50%;
@@ -851,6 +852,7 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   display: none;
   z-index: 3;
 }
+.req-form-wrapp ul li.done:before {background: #333399;}
 .req-form-wrapp ul li.done a span {color: #333399; border: 2px solid #333399; background: #333399;}
 .req-form-wrapp ul li.done a span:before {display: block;}
 .req-form-wrapp ul li a p {

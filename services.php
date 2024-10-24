@@ -109,7 +109,7 @@
                         <iframe src="logistic-consultancy.html" class="w-100" style="transform:scale(1);"></iframe>
                       </div>
                       <h4 class="f-semibold">Logistics Consultancy</h4>
-                      <p class="f-regular">In today’s fast-paced and competitive global marketplace, efficient logistics is a key driver of success. At [Company Name], we provide expert logistics consultancy services designed to optimize supply chains, reduce operational costs, and enhance business performance. With years of experience and a deep understanding of industry trends, our team helps organizations streamline their logistics operations to achieve greater efficiency, flexibility, and scalability.</p>
+                      <p class="f-regular">In today’s fast-paced and competitive global marketplace, efficient logistics is a key driver of success. At PSW, we provide expert logistics consultancy services designed to optimize supply chains, reduce operational costs, and enhance business performance. With years of experience and a deep understanding of industry trends, our team helps organizations streamline their logistics operations to achieve greater efficiency, flexibility, and scalability.</p>
                       <h3>What We Offer:</h3>
                       <ul>
                         <li class="f-regular">Supply Chain Optimization: We analyze your entire supply chain to identify areas of inefficiency, waste, and bottlenecks. Our team then designs tailored strategies to enhance productivity, reduce lead times, and improve delivery performance.</li>
@@ -304,7 +304,7 @@
                         </video>
                       </div>
                       <h4 class="f-semibold">Container freight station (CFS)</h4>
-                      <p class="f-regular">In today’s complex and fast-paced business landscape, efficient supply chain management is crucial for success. Third-party logistics (3PL) providers like [Company Name] offer businesses the expertise, infrastructure, and technology needed to optimize their logistics operations, reduce costs, and enhance customer satisfaction.</p>
+                      <p class="f-regular">In today’s complex and fast-paced business landscape, efficient supply chain management is crucial for success. Third-party logistics (3PL) providers like PSW offer businesses the expertise, infrastructure, and technology needed to optimize their logistics operations, reduce costs, and enhance customer satisfaction.</p>
                       <p class="f-regular">As a leading 3PL provider, we offer a wide range of services, including warehousing, transportation, inventory management, order fulfillment, and distribution. Our comprehensive logistics solutions are designed to simplify supply chain operations, allowing businesses to focus on their core competencies while we manage the complexities of logistics.</p>
                       <h3>What We Offer:</h3>
                       <ul>

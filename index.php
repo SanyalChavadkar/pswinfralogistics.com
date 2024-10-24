@@ -23,8 +23,8 @@
                               <h1 class="heading">Seamless <span class="accentred">logistics</span> solution <br>for your business</h1>
                            </div>
                            <div class="d-flex btn-box">
-                              <a href="#" class="common-btn btn-red">request a quote</a>
-                              <a href="#" class="common-btn">our services</a>
+                              <a href="request-a-quote.php" class="common-btn btn-red">request a quote</a>
+                              <a href="services.php" class="common-btn">our services</a>
                            </div>
                         </div>
                         <div class="big-img vh100 mid-line bg-accentblue">
@@ -59,7 +59,7 @@
                                  </li>
                               </ul>
                            </div>
-                           <a href="#" class="common-btn d-none d-md-block">view all services</a>
+                           <a href="services.php" class="common-btn d-none d-md-block">view all services</a>
                         </div>
                         <div class="service-wrapper vh100 mid-line bg-accentblue">
                            <div class="tab-content accordion vh100" id="myTabContent">
@@ -77,8 +77,8 @@
                                           <iframe src="road-transportation.html" class="w-100" style="transform:scale(1);"></iframe>
                                        </div>
                                        <h4 class="f-semibold">Road Transportation</h4>
-                                       <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
-                                       <a href="#" class="common-btn btn-outline-white">learn more
+                                       <p class="f-regular">At PSW logistics, we understand the vital role that surface transport plays in driving commerce and connecting com...</p>
+                                       <a href="services.php#road-transportation" class="common-btn btn-outline-white">learn more
                                           <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                              <mask id="mask0_3013_272" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="26">
                                                 <rect x="0.5" y="0.922852" width="24" height="24.404" fill="#D9D9D9"/>
@@ -105,8 +105,8 @@
                                           </video> -->
                                        </div>
                                        <h4 class="f-semibold">Logistics Consultancy</h4>
-                                       <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
-                                       <a href="#" class="common-btn btn-outline-white">learn more
+                                       <p class="f-regular">In today’s fast-paced and competitive global marketplace, efficient logistics is a key driver of success. At PSW, we...</p>
+                                       <a href="services.php#logistics-consultancy" class="common-btn btn-outline-white">learn more
                                           <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                              <mask id="mask0_3013_272" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="26">
                                                 <rect x="0.5" y="0.922852" width="24" height="24.404" fill="#D9D9D9"/>
@@ -132,8 +132,8 @@
                                           </video>
                                        </div>
                                        <h4 class="f-semibold">Man Power Supply</h4>
-                                       <p class="f-regular">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a</p>
-                                       <a href="#" class="common-btn btn-outline-white">learn more
+                                       <p class="f-regular">In today’s dynamic business environment, having the right workforce at the right time is critical to achieving oper...</p>
+                                       <a href="services.php#man-power-supply" class="common-btn btn-outline-white">learn more
                                           <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                              <mask id="mask0_3013_272" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="26">
                                                 <rect x="0.5" y="0.922852" width="24" height="24.404" fill="#D9D9D9"/>
@@ -147,7 +147,7 @@
                                  </div>
                               </div>
                            </div>
-                           <a href="#" class="common-btn d-block d-md-none">view all services</a>
+                           <a href="services.php" class="common-btn d-block d-md-none">view all services</a>
                         </div>
                      </div>
                   </div>
@@ -165,7 +165,7 @@
                               <h2 class="heading">About us</h2>
                            </div>
                            <p class="f-reqular">Under the leadership of CEO Mr. Pradeep Waghmare, who brings over 30 years of <br>experience in the import/export industry, PSW <br>Infra Logistics has become a premier provider of logistics services. Our strength lies in our robust resources and substantial warehouse facilities, <br>which enable us to ensure the swift and secure delivery of cargoes. These facilities also allow for <br>the safe and large-scale storage of goods prior to transportation, reflecting our commitment to excellence and reliability in logistics.</p>
-                           <a href="#" class="common-btn">Learn more</a>
+                           <a href="about.php" class="common-btn">Learn more</a>
                         </div>
                         <div class="big-img vh100 mid-line">
                            <img src="images/about-us.webp" class="w-100 img-fluid" alt="About us">
@@ -361,7 +361,7 @@
             <div class="row">
                <div class="col-md-12 d-flex justify-content-center align-items-center">
                   <p class="accentblue f-medium">Need a quote for our services!</p>
-                  <a href="#" class="common-btn btn-outline-blue">request a quote</a>
+                  <a href="request-a-quote.php" class="common-btn btn-outline-blue">request a quote</a>
                </div>
             </div>
          </div>

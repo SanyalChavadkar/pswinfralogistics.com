@@ -205,6 +205,7 @@
     .req-form-wrapp ul li a span:before {height: 7px; width: 10px;}
     .map-form {margin-top: 10.677vw;}
     .navbar-expand-md .navbar-nav .nav-link.active:hover, .navbar-expand-md .navbar-nav .nav-link:hover {color: #CC3333 !important; background: #fff !important;}
+    #request.main-wrapper:before {display: none;}
 }
 @media(max-width: 767px) {
     .tab-content>.tab-pane, .accordion-header {
@@ -226,7 +227,7 @@
         margin-left: 32px;
         display: block;
     }
-    header {height: 68px;}
+    header {height: 68px; border-bottom: 1px solid #E3E3E3;}
     header .mobile-navbar {
         top: 66px;
     }
@@ -265,7 +266,7 @@
         margin-left: 0;
         margin-top: 64px;
     }
-    footer {background: #FCFCFC;}
+    footer {background: #FCFCFC; position: relative;}
     .main-footer .container-fluid, .main-footer .footer-wrapp, .contact-box {flex-direction: column; align-items: center;}
     .main-footer .container-fluid {padding: 10.256vw 0 6.154vw;}
     #float-btn {display: none;}
@@ -413,8 +414,8 @@
     #gallery .row, #contact .row, .map-form, #services-page .row, #about-page .row, #about-page #about-psw .about-overview,
     #about-page .usp-wrapp, #request .row {flex-direction: column;}
     #gallery.main-wrapper:before, #gallery .req-form-wrapper .section-title, #contact.main-wrapper:before, #services-page.main-wrapper:before,
-    #services, #about-page #sidebar ul {display: none;}
-    #sidebar {width: 100%; padding: 8.205vw 20px;}
+    #about-page #sidebar ul {display: none;}
+    #sidebar {width: 100%; padding: 8.205vw 20px; background: #fff;}
     #sidebar #sticky-sidebar, #sticky-tabs {position: relative; top: 0;}
     #sidebar a {font-size: 5.641vw; line-height: 26.82px;}
     #sidebar a img {width: 8.205vw; height: 8.205vw; margin-right: 10px;}
@@ -439,6 +440,7 @@
     .form-wrapper {margin: 12.308vw 20px 26.667vw; width: calc(100% - (20px * 2)); padding-left: 0;}
 
     /*services*/
+    #services-page #services.service-list {display: none;}
     .service-details {width: 100%; padding: 10.256vw 20px 15.256vw;}
     #services-page .service-details .accordion-button {background: transparent !important; color: #FCFCFC !important;}
     #services-page .service-details .accordion-button:after {filter: invert(98%) sepia(100%) saturate(7%) hue-rotate(317deg) brightness(103%) contrast(98%);}
@@ -496,7 +498,89 @@
     .core-values-wrapp .single-values p {font-size: 4.103vw; line-height: 6.667vw;}
 
     /*request*/
-    #request .req-form-wrapper {width: 100%;}
+    #request.main-wrapper:before {display: block !important; height: 132%; z-index: -1;}
+    #request .req-form-wrapper {width: 100%; padding: 4.359vw 20px;}
+    #request .req-form-wrapper .section-title {padding: 0 0 0 4.103vw; margin-bottom: 4.103vw;}
+    #request .req-form-wrapper .section-title h4 {
+        font-size: 6.154vw;
+        line-height: 7.503vw;
+        padding: 2.564vw 0;
+        margin: 0;
+    }
+    #request-content {padding: 0;}
+    #request-content p {font-size: 4.103vw; line-height: 6.667vw; margin-bottom: 3.077vw; padding: 0 2.4vw 0 4.103vw;}
+    #request-content .req-top-btns {display: flex; flex-direction: column; align-items: flex-start;}
+    #request-content .req-top-btns p {font-size: 3.59vw; line-height: 6.667vw; margin-bottom: 8px;  padding: 0 0 0 4.103vw;}
+    #request-content .req-top-btns a {
+        padding: 3.077vw 0;
+        font-size: 4.103vw;
+        line-height: 6.154vw;
+        margin: 0 0 0 4.103vw;
+        width: -webkit-fill-available;
+        justify-content: center;
+    }
+    #request-content .req-top-btns a:nth-child(2) {margin-bottom: 8px !important;}
+    #request-content .req-top-btns a img {margin-right: 4px; width: 6.154vw;}
+    #request .req-form-wrapp {margin: 26.667vw 0; width: 100%;}
+    #request .req-form-wrapp ul {margin: 0 2px;}
+    #request .req-form-wrapp ul li {width: auto; min-width: unset;}
+    #request .req-form-wrapp ul a {flex-direction: row; align-items: center; padding: 0 8px; background: #fff !important;}
+    #request .req-form-wrapp ul li a span {
+        font-size: 4.103vw;
+        line-height: 5vw;
+        height: 8.205vw;
+        width: 8.205vw;
+        margin-bottom: 0;
+    }
+    #request .req-form-wrapp ul li a p, #request .req-form-wrapp .tab-pane h5 {display: none;}
+    #request .req-form-wrapp ul li a.active p {
+        font-size: 3.59vw;
+        line-height: 4.344vw;
+        padding: 0;
+        margin: 0 0 0 8px;
+        display: block;
+        background: #fff;
+    }
+    #request .req-form-wrapp ul li:before {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        left: -40%;
+        width: 11.538vw;
+        z-index: -1;
+    }
+    #request .req-form-wrapp ul li.active:before {left: -6%;}
+    #request .req-form-wrapp .tab-pane {padding-top: 6.923vw; display: none;}
+    #request .req-form-wrapp .tab-pane.active {display: block;}
+    #request .req-form-wrapp .tab-pane .col-md-6 {width: 100%;}
+    #request .form-control {margin-bottom: 4.103vw;}
+    #request .req-form-wrapp .tab-pane a.common-btn, .req-form-wrapp .tab-pane button.common-btn {
+        margin: 0;
+        float: right;
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 4.103vw;
+        line-height: 6.154vw;
+    }
+    #request .req-form-wrapp .tab-pane .checkbox-container {
+        width: 100%;
+        padding: 6.154vw 4.103vw;
+        min-height: 18.462vw;
+        font-size: 4.103vw;
+        line-height: 6.154vw;
+    }
+    #request .req-form-wrapp #second-tab.tab-pane .row {row-gap: 12px;}
+    #request .req-form-wrapp .tab-pane .checkbox-container .check-icon {right: 4.103vw; width: 10.256vw;}
+    #request .form-btns {
+        flex-direction: column-reverse;
+        display: flex;
+        padding-top: 8.205vw;
+        gap: 12px;
+    }
+    .req-form-wrapp .tab-pane .upload-box {min-height: 30.769vw; font-size: 3.59vw; line-height: 5.641vw;}
+    .req-form-wrapp .tab-pane .upload-box img {width: 8.205vw; margin-right: 8px;}
+
+
 }
 @media(min-width:768px) {
 }
