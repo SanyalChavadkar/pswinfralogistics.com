@@ -282,6 +282,7 @@
                checkbox.prop('checked', !checkbox.prop('checked'));
                $(this).toggleClass('checked', checkbox.prop('checked'));
             });
+
             $('#upload-box').on('click', function() {
                $('#file-input').click();
             });
@@ -334,11 +335,11 @@
             if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
                window.msgstatus = false;
                $("#msg-error").show();
-               $("#message").removeClass('error');
+               $("#message").addClass('error');
             } else {
                window.msgstatus = true;
                $("#msg-error").hide();
-               $("#message").addClass('error');
+               $("#message").removeClass('error');
             }
             valfield();
          });
@@ -478,18 +479,19 @@
 
                // Send email
                if (mail($to, $subject, $message, $headers)) {
-                  // echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.');</script>";
-                  // header("Location: " . $_SERVER['PHP_SELF']);
-                  // exit();
-                  echo "<script type='javascript'>runiframe();</script>";
+                  echo "<script>
+                     $('#myModal').modal('show');
+                     runiframe();
+                  </script>";
+                  exit();
                } else {
                   echo "<script>sweetAlert('Message could not be sent...');</script>";
                }
             } 
          }
-         // else {
-         //    header("Location: " . $_SERVER['PHP_SELF']);
-         // }
+         else {
+            header("Location: " . $_SERVER['PHP_SELF']);
+         }
       }
       ?>
    </body>

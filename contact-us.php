@@ -135,7 +135,9 @@
     </section>
 
     <?php include("footer.php"); ?>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>     
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
     <!-- <script type="text/javascript">
       $(document).ready(function(){
         $('#contact_form').on('submit', function(e) {
@@ -195,11 +197,11 @@
           if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
             window.msgstatus = false;
             $("#msg-error").show();            
-            $("#contactmsg").removeClass('error');
+            $("#contactmsg").addClass('error');
           } else {
             window.msgstatus = true;
             $("#msg-error").hide();
-            $("#contactmsg").addClass('error');
+            $("#contactmsg").removeClass('error');
           }
           valfield();
         });

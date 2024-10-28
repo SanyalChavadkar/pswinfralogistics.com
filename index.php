@@ -368,6 +368,8 @@
          </div>
       </div>
       <?php include("footer.php"); ?>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>     
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
       <script type="text/javascript">
          $(document).ready(function(){
             $('.client-slider').owlCarousel({
@@ -493,10 +495,12 @@
           if (emailFilter.test(emailText)) {
             window.emailstatus = true; 
             $("#email-error").hide();
+            $("#emailid").removeClass('error');
           }
           else {
             window.emailstatus = false; 
             $("#email-error").show();
+            $("#emailid").addClass('error');
           }
           valfield();
         });
@@ -515,9 +519,11 @@
           if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
             window.msgstatus = false;
             $("#msg-error").show();
+            $("#contactmsg").addClass('error');
           } else {
             window.msgstatus = true;
             $("#msg-error").hide();
+            $("#contactmsg").removeClass('error');
           }
           valfield();
         });
@@ -572,7 +578,7 @@
           if(mail ($to,$subject,$message,$header)) {
             // echo "<script>sweetAlert('Thank you ! <br> We will get back to you soon.');</script>";
             // echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
-            echo '<script type="javascript">var container_video = $("#container-vid")[0]; container_video.play();</script>'
+            echo '<script type="javascript">var container_video = $("#container-vid")[0]; container_video.play();</script>';
           } else {
             echo "<script>sweetAlert('Message could not be sent...');</script>";
             //header("location:contact-us.php");
