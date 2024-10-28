@@ -193,16 +193,6 @@
       <script type="text/javascript">
          $(document).ready(function(){
 
-            function runiframe() {
-               $("#myModal").modal("show");
-               $('#myModal').find('iframe').each(function() {
-                  const iframeWindow = $(this)[0].contentWindow;
-                  if (iframeWindow && iframeWindow.lottie) {
-                     iframeWindow.lottie.play(); // Play the animation
-                  }
-               });
-            }
-
             var $links = $('#sticky-sidebar li a');
             $(window).on('scroll', function() {
                var scrollPosition = $(window).scrollTop();
@@ -460,6 +450,16 @@
                if (mail($to, $subject, $message, $headers)) {
                   // echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.'); runiframe();</script>";
                   echo '<script type="text/javascript">
+
+                        function runiframe() {
+                           $("#myModal").modal("show");
+                           $("#myModal").find("iframe").each(function() {
+                              const iframeWindow = $(this)[0].contentWindow;
+                              if (iframeWindow && iframeWindow.lottie) {
+                                 iframeWindow.lottie.play(); // Play the animation
+                              }
+                           });
+                        }
                      runiframe();
                   </script>';
                   exit();
