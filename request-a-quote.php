@@ -158,7 +158,7 @@
                                        </div>
                                     </div>
                                     <div class="form-btns">
-                                       <button class="common-btn" id="form-submit">submit</button>
+                                       <button class="common-btn" name="submit" id="form-submit">submit</button>
                                        <a class="common-btn btn-outline-blue" data-bs-toggle="tab" href="#second-tab" role="tab" id="backtosecond">Back</a>
                                     </div>
                                  </div>
