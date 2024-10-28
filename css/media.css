@@ -338,7 +338,7 @@
     #services .accordion-body h4, #services .accordion-body p {width: 100%;}
     #services .accordion-body h4 {font-size: 5.128vw; line-height: 6.251vw; margin-bottom: 6.154vw;}
     #services .accordion-body h4:before {bottom: -3.077vw; width: 12.821vw;}
-    #services .accordion-body p {font-size: 4.103vw; line-height: 6.154vw; margin-bottom: 0;}
+    #services .accordion-body p {font-size: 4.103vw; line-height: 6.154vw; margin-bottom: 0; padding: 0 15px;}
     #services .accordion-body a, #about .common-btn {margin: 6.154vw 20px 0; width: auto; display: block; border-width: 2px;}
     #services .common-btn {width: 100%; text-align: center;}
     #about, #why, #testimonials {padding-top: 24.615vw;}
@@ -459,7 +459,7 @@
         width: calc(100% - 8px);
         font-size: 4.103vw;
         line-height: 6.154vw;
-        text-align: justify;
+        text-align: left;
     }
     .service-details .accordion-body p, .service-details .accordion-body ul {margin: 0 0 20px;}
     #services-page .service-details .accordion-body h3 {margin-bottom: 8px;}

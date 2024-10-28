@@ -544,6 +544,26 @@
           $(this).find('button').attr('aria-expanded','true');
           // $("html, body").animate({ scrollTop: $(elet).offset().top - ($('header').height() - 160) }, 500);
           $("html, body").animate({ scrollTop: $(elet).offset().top - ($(elet).offset().top - 180) }, 500);
+          var sect = $(this).attr('data-bs-target');
+          $('.accordion-collapse'+sect).addClass('show');
+
+          // Pause and reset all animations in other iframes
+          $('#myTabContent iframe').each(function() {
+            const iframeWindow = $(this)[0].contentWindow;
+            if (iframeWindow && iframeWindow.lottie) {
+              iframeWindow.lottie.pause(); // Pause the animation
+              // Optional: Reset if needed
+              iframeWindow.lottie.goToAndStop(0, true);
+            }
+          });
+
+          // Play the animation in the active tab's iframe
+          $(sect).find('iframe').each(function() {
+            const iframeWindow = $(this)[0].contentWindow;
+            if (iframeWindow && iframeWindow.lottie) {
+              iframeWindow.lottie.play(); // Play the animation
+            }
+          });
         });  
       }
 

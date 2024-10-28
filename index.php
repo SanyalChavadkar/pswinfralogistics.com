@@ -448,6 +448,29 @@
                });
             });
 
+            $('button.accordion-button').on('click', function (e) {
+               var sect = $(this).attr('data-bs-target');
+               $('.accordion-collapse'+sect).addClass('show');
+
+               // Pause and reset all animations in other iframes
+               $('#myTabContent iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.pause(); // Pause the animation
+                     // Optional: Reset if needed
+                     iframeWindow.lottie.goToAndStop(0, true);
+                  }
+               });
+
+               // Play the animation in the active tab's iframe
+               $(sect).find('iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.play(); // Play the animation
+                  }
+               });
+            });
+
             var container_video = $('#container-vid')[0];
             container_video.addEventListener('loadedmetadata', function() {
                var half = container_video.duration / 2;
