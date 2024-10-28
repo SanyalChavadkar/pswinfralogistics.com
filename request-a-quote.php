@@ -77,9 +77,9 @@
                                              <input type="text" name="organization" class="form-control" placeholder="Organization" pattern="[A-Za-z0-9\-]+" id="txtOrganization" title="Only letters, numbers and '-' are allowed" required>
                                           </div>
                                        </div>
-                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-  Open modal
-</button>
+                                       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                         Open modal
+                                       </button> -->
 
                                        <a class="common-btn" data-bs-toggle="tab" href="#second-tab" role="tab" id="proceedtosecond">Proceed</a>
                                     </div>
@@ -417,7 +417,7 @@
                $to = "laynasart27la@gmail.com";
                $subject = "PSW Infra Logistics - Request a Quote Form";
                $boundary = md5("sanwebe");
-               $headers = "From: Request a Quote <noreply@pswinfralogistics.com>\r\n";
+               $headers = "From: Request a Quote <noreply@uat.pswinfralogistics.com>\r\n";
                $headers .= "MIME-Version: 1.0\r\n";
                $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
