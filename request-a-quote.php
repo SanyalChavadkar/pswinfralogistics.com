@@ -194,6 +194,7 @@
          $(document).ready(function(){
 
             function runiframe() {
+               $("#myModal").modal("show");
                $('#myModal').find('iframe').each(function() {
                   const iframeWindow = $(this)[0].contentWindow;
                   if (iframeWindow && iframeWindow.lottie) {
@@ -458,10 +459,9 @@
                // Send email
                if (mail($to, $subject, $message, $headers)) {
                   // echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.'); runiframe();</script>";
-                  echo "<script>
-                     $('#myModal').modal('show');
+                  echo '<script type="text/javascript">
                      runiframe();
-                  </script>";
+                  </script>';
                   exit();
                } else {
                   echo "<script>sweetAlert('Message could not be sent...');</script>";
