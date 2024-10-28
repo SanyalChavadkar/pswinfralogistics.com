@@ -523,9 +523,8 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   font-weight: 400;
   color: #656565;
   padding: 0.417vw 0.833vw;
-  margin-bottom: 1.25vw;
 }
-.form-group {position: relative;}
+.form-group {position: relative; margin-bottom: 1.25vw;}
 .form-group.select:before {
   content: '';
   height: 1.276vw;
@@ -539,12 +538,16 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 }
 .form-group.select.active:before {transform: translateY(-50%) rotate(180deg);}
 .form-control:hover, .form-group.select:hover {background: #D6D6EB4D; border-color: #5C5CAD;}
+.form-control.error {border: 2px solid #B3261E;}
 .message-div button {margin-top: 1.667vw;}
-.errors {
+.errors, .left-sec p.errors {
   display: none;
-  font-size: 12px;
-  color: red;
-  margin-top: -15px;
+  font-size: 0.625vw !important;
+  color: #B3261E !important;
+  margin-top: 4px !important;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-left: 15px;
 }
 
 
@@ -663,7 +666,7 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 .single-addrs h3 {font-size: 0.938vw; line-height: 1.134vw; color: #191919; margin-bottom: 0.417vw; text-transform: capitalize;}
 .single-addrs p, .single-addrs a {font-size: 0.729vw; line-height: 1.042vw; margin-bottom: 0;}
 .single-addrs p {color: #4B4B4B;}
-.single-addrs a {color: #333399; text-decoration: underline;}
+.single-addrs a {color: #333399; text-decoration: underline; display: block;}
 
 /*about page*/
 #sidebar #sticky-sidebar, #sticky-tabs {position: fixed; top: 16.224vw;}
@@ -934,6 +937,17 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
 /*.req-form-wrapp .tab-pane .upload-box:hover {background-color: #cfe2ff;}*/
 .req-form-wrapp .tab-pane .upload-box p {margin-bottom: 0;}
 .req-form-wrapp .tab-pane .upload-box img {width: 2.917vw; margin-right: 0.417vw;}
+#myModal .modal-body {padding: 0; padding-top: 1.25vw;}
+#myModal button {
+  height: 1.146vw;
+  width: 1.146vw;
+  background-size: cover;
+  position: absolute;
+  right: 2.547vw;
+  top: 2.547vw;
+  z-index: 1;
+}
+#myModal iframe {height: 36.458vw;}
 
 
 /*Gallery page*/
@@ -960,3 +974,4 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   margin-bottom: 0;
   color: #323232;
 }
+#viewmore.viewless img {transform: rotate(-180deg);}

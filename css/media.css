@@ -112,7 +112,7 @@
     }
     header .mobile-navbar.open {
         left: 0%;
-        top: 49px;
+        top: 45px;
     }
     header .mobile-navbar {
         z-index: 2;
@@ -133,7 +133,7 @@
     }
     .navbar-brand img {
         margin: inherit;
-        width: 75%;
+        width: 65%;
         margin-top: 8px;
         display: flex;
         justify-content: center;
@@ -153,7 +153,7 @@
     .navbar-expand-md .navbar-nav .nav-link {
         font-size: 3.327vw;
         line-height: 2.212vw;
-        padding: 0px 0 0 3.226vw;
+        padding: 0px 0 0 7.292vw;
         margin-bottom: 4.032vw;
         text-align: left;
         color: #191919;
@@ -191,13 +191,14 @@
     .left-sec {padding-top: 6vw; padding-bottom: 5vw;}
     .left-sec p br {display: none;}
     #why .usp-wrapp {padding: 2.313vw 3.531vw;}
-    .section-title {margin-left: 1px;}
+    .section-title {margin-left: 1px; padding-left: 12px;}
+    #about-page .section-title, .req-form-wrapper .section-title {padding-left: 12px;}
     .main-footer .container-fluid {padding-top: 2.5vw;}
     .requestbtn {
         font-size: 3.327vw;
         line-height: 2.212vw;
         padding: 2vw 3vw;
-        margin-left: 3.226vw;
+        margin: 8.292vw 0 0 7.292vw;
     }
     #about-page .about-wrapper {padding-top: 5vw !important;}
     .req-form-wrapper {padding-left: 1px; padding-top: 10.667vw; padding-bottom: 5.333vw;}
@@ -205,7 +206,8 @@
     .req-form-wrapp ul li a span:before {height: 7px; width: 10px;}
     .map-form {margin-top: 10.677vw;}
     .navbar-expand-md .navbar-nav .nav-link.active:hover, .navbar-expand-md .navbar-nav .nav-link:hover {color: #CC3333 !important; background: #fff !important;}
-    #request.main-wrapper:before {display: none;}
+    #request.main-wrapper:before, #float-btn {display: none;}
+    .service-details .accordion-body p, .service-details .accordion-body ul {padding-left: 1rem;}
 }
 @media(max-width: 767px) {
     .tab-content>.tab-pane, .accordion-header {
@@ -438,6 +440,7 @@
     .single-addrs p, .single-addrs a {font-size: 3.077vw; line-height: 5.128vw;}
     .single-addrs a {line-height: 3.723vw;}
     .form-wrapper {margin: 12.308vw 20px 26.667vw; width: calc(100% - (20px * 2)); padding-left: 0;}
+    .section-title {margin-bottom: 24px;}
 
     /*services*/
     #services-page #services.service-list {display: none;}
@@ -462,6 +465,7 @@
     #services-page .service-details .accordion-body h3 {margin-bottom: 8px;}
     .service-details .accordion-body .img-box, #about-page .about-wrapper, #about-page #about-psw img {width: 100%;}
     .service-details .accordion-body .img-box iframe {height: auto !important;}
+    .service-details .accordion-body ul {padding-left: 2rem;}
 
     /*about*/
     #about-page .about-wrapper, #about-page .section {padding: 0 !important;}

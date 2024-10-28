@@ -49,7 +49,7 @@
                            <div class="nav-box">
                               <ul class="nav nav-tabs d-none d-md-block border-0" id="myTab" role="tablist">
                                  <li class="nav-item" role="presentation">
-                                    <a class="nav-link active f-semibold" data-bs-toggle="tab" href="#road-transportation" role="tab">Road Transportation <img src="images/service_arrow_red.svg" class="img-fluid" alt="arrow icon"></a>
+                                    <a class="nav-link active f-semibold" data-bs-toggle="tab" href="#road-transportation" role="tab" data-aos="">Road Transportation <img src="images/service_arrow_red.svg" class="img-fluid" alt="arrow icon"></a>
                                  </li>
                                  <li class="nav-item" role="presentation">
                                     <a class="nav-link f-semibold" data-bs-toggle="tab" href="#logistics-consultancy" role="tab" >Logistics Consultancy <img src="images/service_arrow_red.svg" class="img-fluid" alt="arrow icon"></a>
@@ -59,7 +59,7 @@
                                  </li>
                               </ul>
                            </div>
-                           <a href="services.php" class="common-btn d-none d-md-block">view all services</a>
+                           <a href="services.php" class="common-btn d-none d-md-flex">view all services</a>
                         </div>
                         <div class="service-wrapper vh100 mid-line bg-accentblue">
                            <div class="tab-content accordion vh100" id="myTabContent">
@@ -130,6 +130,7 @@
                                           <video width="100%" autoplay muted>
                                              <source src="images/man-power-supply.mp4" type="video/mp4">
                                           </video>
+                                          <!-- <iframe src="man-power-supply.html" class="w-100" style="transform:scale(1);"></iframe> -->
                                        </div>
                                        <h4 class="f-semibold">Man Power Supply</h4>
                                        <p class="f-regular">In today’s dynamic business environment, having the right workforce at the right time is critical to achieving oper...</p>
@@ -147,7 +148,7 @@
                                  </div>
                               </div>
                            </div>
-                           <a href="services.php" class="common-btn d-block d-md-none">view all services</a>
+                           <a href="services.php" class="common-btn d-flex d-md-none">view all services</a>
                         </div>
                      </div>
                   </div>
@@ -318,7 +319,7 @@
                                  </div>
                                  <div class="form-group">
                                     <input type="email" name="email" class="form-control f-light" id="emailid" required placeholder="Email Id">
-                                    <p class="errors">Please Enter Valid Email Address</p>
+                                    <p class="errors" id="email-error">Please Enter Valid Email Address</p>
                                  </div>
                                  <div class="form-group select">
                                     <select name="service" class="form-control" required>
@@ -401,18 +402,53 @@
             $('select').on('click', function(){
                $(this).parent().toggleClass('active');
             })
+
+            $(window).on('scroll', function() {
+               var activeTab = $('#myTab li a.aos-animate').attr('href');
+               $('#myTabContent iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  // if (iframeWindow && iframeWindow.lottie) {
+                  //    iframeWindow.lottie.pause(); // Pause the animation
+                  //    // Optional: Reset if needed
+                  //    iframeWindow.lottie.goToAndStop(0, true);
+                  // }
+               });
+
+               // Play the animation in the active tab's iframe
+               $(activeTab).find('iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.play(); // Play the animation
+                  }
+               });
+            });
+
             $('a[data-bs-toggle="tab"]').on('click', function (e) {
                var sect = $(this).attr('href');
-               $('#myTabContent video').each(function() {
-                  this.pause();
-                  this.currentTime = 0;
+               $('.tab-pane'+sect+' .accordion-collapse').addClass('show');
+
+               // Pause and reset all animations in other iframes
+               $('#myTabContent iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.pause(); // Pause the animation
+                     // Optional: Reset if needed
+                     iframeWindow.lottie.goToAndStop(0, true);
+                  }
                });
-               $(sect).find('video').each(function() { this.play(); });
+
+               // Play the animation in the active tab's iframe
+               $(sect).find('iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.play(); // Play the animation
+                  }
+               });
             });
 
             var container_video = $('#container-vid')[0];
             container_video.addEventListener('loadedmetadata', function() {
-            var half = container_video.duration / 2;
+               var half = container_video.duration / 2;
                container_video.addEventListener('timeupdate', function() {
                   if (container_video.currentTime >= half) {
                      container_video.pause();
@@ -535,11 +571,12 @@
 
           if(mail ($to,$subject,$message,$header)) {
             // echo "<script>sweetAlert('Thank you ! <br> We will get back to you soon.');</script>";
-            echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
+            // echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
+            echo '<script type="javascript">var container_video = $("#container-vid")[0]; container_video.play();</script>'
           } else {
-            // echo "<script>sweetAlert('Message could not be sent...');</script>";
+            echo "<script>sweetAlert('Message could not be sent...');</script>";
             //header("location:contact-us.php");
-            echo "<script>alert('Message could not be sent...');</script>";
+            // echo "<script>alert('Message could not be sent...');</script>";
           }
         }
       }

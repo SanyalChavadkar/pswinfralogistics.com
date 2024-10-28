@@ -77,6 +77,10 @@
                                              <input type="text" name="organization" class="form-control" placeholder="Organization" pattern="[A-Za-z0-9\-]+" id="txtOrganization" title="Only letters, numbers and '-' are allowed" required>
                                           </div>
                                        </div>
+                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  Open modal
+</button>
+
                                        <a class="common-btn" data-bs-toggle="tab" href="#second-tab" role="tab" id="proceedtosecond">Proceed</a>
                                     </div>
                                  </div>
@@ -167,12 +171,37 @@
             </div>
          </section>
       </div>
+      <div class="modal fade" id="myModal">
+         <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  <div class="img-box">
+                     <iframe src="quote-submit.html" class="w-100" style="transform:scale(1);"></iframe>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
       <?php include("footer.php"); ?>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>     
       <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
       <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script> -->
       <script type="text/javascript">
          $(document).ready(function(){
+
+            function runiframe() {
+               $('#myModal').find('iframe').each(function() {
+                  const iframeWindow = $(this)[0].contentWindow;
+                  if (iframeWindow && iframeWindow.lottie) {
+                     iframeWindow.lottie.play(); // Play the animation
+                  }
+               });
+            }
+
             var $links = $('#sticky-sidebar li a');
             $(window).on('scroll', function() {
                var scrollPosition = $(window).scrollTop();
@@ -280,11 +309,13 @@
             var emailText = $("#email").val();
             if (emailFilter.test(emailText)) {
                window.emailstatus = true; 
-               $("#email-error").hide();
+               $("#email-error").hide(); 
+               $("#email").removeClass('error');
             }
             else {
                window.emailstatus = false; 
                $("#email-error").show();
+               $("#email").addClass('error');
             }
             valfield();
          });
@@ -303,9 +334,11 @@
             if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
                window.msgstatus = false;
                $("#msg-error").show();
+               $("#message").removeClass('error');
             } else {
                window.msgstatus = true;
                $("#msg-error").hide();
+               $("#message").addClass('error');
             }
             valfield();
          });
@@ -342,6 +375,7 @@
                   e.preventDefault();
                   if(window.emailstatus == "" || window.emailstatus == false) {
                      $("#email-error").show();
+                     $("#email").addClass('error');
                      $("#form-submit").prop("disabled", true);
                   }
                }
@@ -352,10 +386,12 @@
                   e.preventDefault();
                   if(window.msgstatus == "" || window.msgstatus == false) {
                      $("#msg-error").show();
+                     $("#message").addClass('error');
                      $("#form-submit").prop("disabled", true);
                   }
                   if(window.emailstatus == "" || window.emailstatus == false) {
                      $("#email-error").show();
+                     $("#email").addClass('error');
                      $("#form-submit").prop("disabled", true);
                   }
                }
@@ -442,9 +478,10 @@
 
                // Send email
                if (mail($to, $subject, $message, $headers)) {
-                  echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.');</script>";
+                  // echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.');</script>";
                   // header("Location: " . $_SERVER['PHP_SELF']);
                   // exit();
+                  echo "<script type='javascript'>runiframe();</script>";
                } else {
                   echo "<script>sweetAlert('Message could not be sent...');</script>";
                }

@@ -91,7 +91,7 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="gallery-wrapper d-none">
+                           <div class="gallery-wrapper hide d-none">
                               <div class="inner-wrapper1">
                                  <div class="gallery-single">
                                     <a href="images/gallery1.webp" class="img-box">
@@ -122,7 +122,7 @@
                               </div>
                            </div>
                            <div class="col-md-12 text-center">
-                              <button class="common-btn mx-auto" id="viewmore">view more <img src="images/arrow_down.svg" class="img-fluid"></button>
+                              <button class="common-btn mx-auto viewmore" id="viewmore">view more <img src="images/arrow_down.svg" class="img-fluid"></button>
                            </div>
                         </div>
                      </div>
@@ -150,7 +150,18 @@
                hash:false,
             });
             $('#viewmore').on('click', function(){
-               $('#gallery-wrapper .d-none').removeClass('d-none');
+               if ($(this).hasClass('viewmore')) {
+                  $('#gallery-wrapper .hide').removeClass('d-none');
+                  $(this).removeClass('viewmore');
+                  $(this).addClass('viewless');
+                  $(this).html('view less <img src="images/arrow_down.svg" class="img-fluid">');
+               } else {
+                  $('#gallery-wrapper .hide').addClass('d-none');
+                  console.log('clicked');
+                  $(this).addClass('viewmore');
+                  $(this).removeClass('viewless');
+                  $(this).html('view more <img src="images/arrow_down.svg" class="img-fluid">');
+               }
             });
          });
       </script>

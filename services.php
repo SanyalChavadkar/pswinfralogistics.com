@@ -28,7 +28,7 @@
               <div class="nav-box" id="sticky-tabs">
                 <ul class="nav nav-tabs d-none d-md-block border-0" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link active f-semibold" data-bs-toggle="tab" href="#road-transportation" role="tab">Road Transportation <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
+                    <a class="nav-link active f-semibold" data-bs-toggle="tab" href="#road-transportation" role="tab" data-aos>Road Transportation <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
                   </li>
                   <li class="nav-item" role="presentation">
                     <a class="nav-link f-semibold" data-bs-toggle="tab" href="#logistics-consultancy" role="tab" >Logistics Consultancy <img src="images/service_arrow_pink.svg" class="img-fluid" alt="arrow icon"></a>
@@ -259,9 +259,10 @@
                     <div class="accordion-body p-0 text-center">
                       <div class="img-box">
                         <!-- <img src="images/infra-projects.svg" class="img-fluid" alt="Infra Projects - Transportation & Consultancy"> -->
-                        <video width="100%" autoplay muted>
+                        <!-- <video width="100%" autoplay muted>
                           <source src="images/infra-projects.mp4" type="video/mp4">
-                        </video>
+                        </video> -->
+                        <iframe src="infra-projects.html" class="w-100" style="transform:scale(1);"></iframe>
                       </div>
                       <h4 class="f-semibold">Infra Projects - Transportation & Consultancy</h4>
                       <p class="f-regular">Infra Projects refer to large-scale construction and development projects that create and improve the foundational systems and services needed for a community or economy. We PSW, as a leading logistics company, we specialize in providing reliable, efficient, and cost-effective solutions tailored to meet the diverse needs of our clients. We offer a wide range of services, including Transportation Infrastructure, Utilities Infrastructure, Public Facilities, Energy Projects<br>
@@ -299,9 +300,10 @@
                     <div class="accordion-body p-0 text-center">
                       <div class="img-box">
                         <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Container freight station (CFS)"> -->
-                        <video width="100%" autoplay muted>
+                        <!-- <video width="100%" autoplay muted>
                           <source src="images/cfs.mp4" type="video/mp4">
-                        </video>
+                        </video> -->
+                        <iframe src="cfs.html" class="w-100" style="transform:scale(1);"></iframe>
                       </div>
                       <h4 class="f-semibold">Container freight station (CFS)</h4>
                       <p class="f-regular">In today’s complex and fast-paced business landscape, efficient supply chain management is crucial for success. Third-party logistics (3PL) providers like PSW offer businesses the expertise, infrastructure, and technology needed to optimize their logistics operations, reduce costs, and enhance customer satisfaction.</p>
@@ -330,9 +332,10 @@
                     <div class="accordion-body p-0 text-center">
                       <div class="img-box">
                         <!-- <img src="images/logistic-management.svg" class="img-fluid" alt="Logistic Management"> -->
-                        <video width="100%" autoplay muted>
+                        <!-- <video width="100%" autoplay muted>
                           <source src="images/logistic-managment.mp4" type="video/mp4">
-                        </video>
+                        </video> -->
+                        <iframe src="lms.html" class="w-100" style="transform:scale(1);"></iframe>
                       </div>
                       <h4 class="f-semibold">Logistic Management</h4>
                       <p class="f-regular">Logistics Management involves the planning, implementation, and control of the flow and storage of goods, services, and related information from the point of origin to the point of consumption. At PSW, our goal is to meet customer requirements efficiently while minimizing costs. With years of experience and a deep understanding of industry trends, our team helps organizations to streamline their logistics operations to achieve greater efficiency, flexibility, and scalability.<br>
@@ -407,9 +410,10 @@
                     <div class="accordion-body p-0 text-center">
                       <div class="img-box">
                         <!-- <img src="images/home-road-transport.svg" class="img-fluid" alt="Port Handling"> -->
-                        <video width="100%" autoplay muted>
+                        <!-- <video width="100%" autoplay muted>
                           <source src="images/port-handling.mp4" type="video/mp4">
-                        </video>
+                        </video> -->
+                        <iframe src="port-handiling.html" class="w-100" style="transform:scale(1);"></iframe>
                       </div>
                       <h4 class="f-semibold">Port Handling</h4>
                       <p class="f-regular">Port handling and intercarting services are essential components of the global supply chain, facilitating the smooth transfer of goods between sea, land, and air transport. At PSW, we specialize in providing efficient, reliable, and safe port handling and intercarting solutions that help businesses streamline cargo operations and minimize delays.</p>
@@ -467,6 +471,32 @@
   <?php include("footer.php"); ?>
   <script type="text/javascript">
     $(document).ready(function() {
+
+      var activeTab = $('#myTab li a.active').attr('href');
+      $('#myTabContent iframe').each(function() {
+        const iframeWindow = $(this)[0].contentWindow;
+      });
+
+      // Play the animation in the active tab's iframe
+      $(activeTab).find('iframe').each(function() {
+        const iframeWindow = $(this)[0].contentWindow;
+        if (iframeWindow && iframeWindow.lottie) {
+          iframeWindow.lottie.play(); // Play the animation
+        }
+      });
+
+      var footer = $('.main-footer');
+      var scrollPosition = $(window).scrollTop() + $(window).height();
+      var footerPosition = footer.offset().top;
+
+      // Check if the footer is in view (90% of the viewport)
+      if (scrollPosition >= footerPosition * 0.9) {
+        $('#sticky-tabs').css({'position': 'relative','top': '0'});
+        // $(window).off('scroll'); // Unbind the scroll event after the alert
+      } else {
+        $('#sticky-tabs').css({'position': 'sticky','top': '16.224vw'});
+      }
+
       var width=$(window).width();
       if (width > 767) {
         $(function(){
@@ -517,18 +547,27 @@
         });  
       }
 
-      $(window).on('scroll', function() {
-        var footer = $('.main-footer');
-        var scrollPosition = $(window).scrollTop() + $(window).height();
-        var footerPosition = footer.offset().top;
+      $('a[data-bs-toggle="tab"]').on('click', function (e) {
+        var sect = $(this).attr('href');
+        $('.tab-pane'+sect+' .accordion-collapse').addClass('show');
 
-        // Check if the footer is in view (90% of the viewport)
-        if (scrollPosition >= footerPosition * 0.9) {
-          $('#sticky-tabs').css({'position': 'relative','top': '0'});
-          // $(window).off('scroll'); // Unbind the scroll event after the alert
-        } else {
-          $('#sticky-tabs').css({'position': 'sticky','top': '16.224vw'});
-        }
+        // Pause and reset all animations in other iframes
+        $('#myTabContent iframe').each(function() {
+          const iframeWindow = $(this)[0].contentWindow;
+          if (iframeWindow && iframeWindow.lottie) {
+            iframeWindow.lottie.pause(); // Pause the animation
+            // Optional: Reset if needed
+            iframeWindow.lottie.goToAndStop(0, true);
+          }
+        });
+
+        // Play the animation in the active tab's iframe
+        $(sect).find('iframe').each(function() {
+          const iframeWindow = $(this)[0].contentWindow;
+          if (iframeWindow && iframeWindow.lottie) {
+            iframeWindow.lottie.play(); // Play the animation
+          }
+        });
       });
     });
   </script>

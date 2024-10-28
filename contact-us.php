@@ -171,10 +171,12 @@
           if (emailFilter.test(emailText)) {
             window.emailstatus = true; 
             $("#email-error").hide();
+            $("#emailid").removeClass('error');
           }
           else {
             window.emailstatus = false; 
             $("#email-error").show();
+            $("#emailid").addClass('error');
           }
           valfield();
         });
@@ -192,10 +194,12 @@
           var textChar = $(this).val().match(specialregex); // search special character
           if((textUrl && textUrl.length > allowed)||(textArea && textArea.length > allowed)||(textChar && textChar.length > allowed)){
             window.msgstatus = false;
-            $("#msg-error").show();
+            $("#msg-error").show();            
+            $("#contactmsg").removeClass('error');
           } else {
             window.msgstatus = true;
             $("#msg-error").hide();
+            $("#contactmsg").addClass('error');
           }
           valfield();
         });
@@ -248,12 +252,12 @@
           $header .= "Content-type: text/html\r\n";
 
           if(mail ($to,$subject,$message,$header)) {
-            // echo "<script>sweetAlert('Thank you ! <br> We will get back to you soon.');</script>";
-            echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
+            echo "<script>sweetAlert('Thank you ! <br> Message sent successfully.<br>We will get back to you soon.');</script>";
+            // echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
           } else {
-            // echo "<script>sweetAlert('Message could not be sent...');</script>";
+            echo "<script>sweetAlert('Message could not be sent...');</script>";
             //header("location:contact-us.php");
-            echo "<script>alert('Message could not be sent...');</script>";
+            // echo "<script>alert('Message could not be sent...');</script>";
           }
         }
       }

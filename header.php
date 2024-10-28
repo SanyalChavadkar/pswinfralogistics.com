@@ -34,8 +34,8 @@
         </div>
         <a id="requestbtn" href="request-a-quote.php" class="d-none d-md-none d-lg-block">Request a quote</a>
         <div class="d-flex d-md-flex d-lg-none" id="header-btn">
-          <a href="#"><img src="images/float-call.svg" class="img-fluid" alt="call btn"></a>
-          <a href="#"><img src="images/float-whatsapp.svg" class="img-fluid" alt="float btn"></a>
+          <a href="tel:+91 74000 66629"><img src="images/float-call.svg" class="img-fluid" alt="call btn"></a>
+          <a href="https://wa.link/1onyvt" target="_blank"><img src="images/float-whatsapp.svg" class="img-fluid" alt="float btn"></a>
         </div>
       </nav>
     </div>
