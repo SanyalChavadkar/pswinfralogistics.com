@@ -402,11 +402,16 @@
       <?php
       if (isset($_POST['submit'])) {
          if (empty($_POST['honeypot'])) {
-            $name = htmlspecialchars($_POST['name']);
-            $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-            $phone = htmlspecialchars($_POST['phone']);
-            $organization = htmlspecialchars($_POST['organization']);
-            $message_content = htmlspecialchars($_POST['message']);
+            // $name = htmlspecialchars($_POST['name']);
+            // $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+            // $phone = htmlspecialchars($_POST['phone']);
+            // $organization = htmlspecialchars($_POST['organization']);
+            // $message_content = htmlspecialchars($_POST['message']);
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $organization = $_POST['organization'];
+            $message_content = $_POST['message'];
             $services = isset($_POST['services']) ? $_POST['services'] : [];
             $services_list = implode(", ", $services);
 
@@ -417,7 +422,7 @@
                $to = "laynasart27la@gmail.com";
                $subject = "PSW Infra Logistics - Request a Quote Form";
                $boundary = md5("sanwebe");
-               $headers = "From: Request a Quote <noreply@uat.pswinfralogistics.com>\r\n";
+               $headers = "From: Request a Quote - PSW Infra Logistics <noreply@uat.pswinfralogistics.com>\r\n";
                $headers .= "MIME-Version: 1.0\r\n";
                $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 

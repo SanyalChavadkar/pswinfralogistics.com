@@ -570,7 +570,7 @@
                $message .= '<tr><td><b>Contact Number :</b></td><td>' .$_POST['phone'] ."</td></tr>";
                $message .= '<tr><td><b>Message :</b></td><td>' .$_POST['message'] ."</td></tr></table>";
 
-               $header = "From: contact<noreply@uat.pswinfralogistics.com> \r\n";
+               $header = "From: Leave us a Message - PSW Infra Logistics <noreply@uat.pswinfralogistics.com> \r\n";
                $header .= "CC:pswinfralogistics@gmail.com \r\n";
                $header .= "MIME-Version: 1.0\r\n";
                $header .= "Content-type: text/html\r\n";
