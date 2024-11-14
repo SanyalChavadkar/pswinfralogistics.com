@@ -153,7 +153,8 @@
                                                 <img src="images/upload-file.svg" alt="file icon" class="img-fluid file-icon">
                                                 <p>Click to upload files</p>
                                              </div>
-                                             <input type="file" name="files" id="file-input" multiple accept=".doc,.docx,.docs,.pdf">
+                                             <input type="file" name="files[]" id="file-input" multiple accept=".doc,.docx,.docs,.pdf,.jpg,.jpeg,.png">
+                                             <p id="filesname"></p>
                                           </div>
                                        </div>
                                     </div>
@@ -278,7 +279,18 @@
                $('#file-input').click();
             });
 
-
+            $('#file-input').on('change', function() {
+                var files = this.files;  // Get the list of selected files
+                var fileNames = [];      // Array to store file names
+        
+                // Loop through each selected file and add its name to the array
+                $.each(files, function(index, file) {
+                    fileNames.push(file.name);  // Push file name with extension
+                });
+        
+                // Display the selected file names in the #filesname element
+                $('#filesname').text('Selected Files: ' + fileNames.join(', '));
+            });
          });
          $(function () {
             $('#txtName, #txtOrganization').keydown(function (e) {
@@ -391,179 +403,87 @@
          });
       </script>
       <?php
-      if (isset($_POST['submit'])) {
-         if (empty($_POST['honeypot'])) {
-            // $name = htmlspecialchars($_POST['name']);
-            // $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-            // $phone = htmlspecialchars($_POST['phone']);
-            // $organization = htmlspecialchars($_POST['organization']);
-            // $message_content = htmlspecialchars($_POST['message']);
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $organization = $_POST['organization'];
-            $message_content = $_POST['message'];
-            $services = isset($_POST['services']) ? $_POST['services'] : [];
-            $services_list = implode(", ", $services);
-
-            // Check if the required fields are filled
-            if (empty($name) || empty($email) || empty($phone) || empty($organization) || empty($services) || empty($message_content)) {
-               echo "<script>sweetAlert('All Fields are required...!');</script>";
-            } else {
-               $to = "laynasart27la@gmail.com";
-               $subject = "PSW Infra Logistics - Request a Quote Form";
-               $boundary = md5("sanwebe");
-               $headers = "From: Request a Quote - PSW Infra Logistics <noreply@uat.pswinfralogistics.com>\r\n";
-               $headers .= "MIME-Version: 1.0\r\n";
-               $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
-
-               // Prepare the email content
-               $message = "--$boundary\r\n";
-               $message .= "Content-Type: text/html; charset=UTF-8\r\n\r\n";
-               $message .= "<table border='0'>
-               <tr><td><b>Name: </b></td><td>$name</td></tr>
-               <tr><td><b>Email Id: </b></td><td>$email</td></tr>
-               <tr><td><b>Contact Number: </b></td><td>$phone</td></tr>
-               <tr><td><b>Organization: </b></td><td>$organization</td></tr>
-               <tr><td><b>Service request for: </b></td><td>$services_list</td></tr>
-               <tr><td><b>Message: </b></td><td>$message_content</td></tr>
-               </table>\r\n";
-
-               // Handle file attachment
-               if (!empty($_FILES['files']['name'][0])) {
-                  $file_tmp_name = $_FILES['files']['tmp_name'][0];
-                  $file_name = $_FILES['files']['name'][0];
-                  $file_type = $_FILES['files']['type'][0];
-                  $file_size = $_FILES['files']['size'][0];
-
-                  $content = chunk_split(base64_encode(file_get_contents($file_tmp_name)));
-                  $message .= "--$boundary\r\n";
-                  $message .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
-                  $message .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
-                  $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
-                  $message .= "$content\r\n";
-               }
-
-               $message .= "--$boundary--";
-
-               // Send email
-               if (mail($to, $subject, $message, $headers)) {
-                  // echo "<script>sweetAlert('Thank you! <br> We will get back to you soon.'); runiframe();</script>";
-                  echo '<script type="text/javascript">
-
-                        function runiframe() {
-                           $("#myModal").modal("show");
-                           $("#myModal").find("iframe").each(function() {
-                              const iframeWindow = $(this)[0].contentWindow;
-                              if (iframeWindow && iframeWindow.lottie) {
-                                 iframeWindow.lottie.play(); // Play the animation
-                              }
-                           });
-                        }
-                     runiframe();
-                  </script>';
-                  exit();
+         // Ensure Composer's autoload is included (adjust the path if necessary)
+         require 'vendor/autoload.php';  // Include Composer's autoloader
+        
+         use PHPMailer\PHPMailer\PHPMailer;
+         use PHPMailer\PHPMailer\Exception;
+        
+         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (empty($_POST['honeypot'])) {  // Honeypot check
+               $name = $_POST['name'];
+               $email = $_POST['email'];
+               $phone = $_POST['phone'];
+               $organization = $_POST['organization'];
+               $message_content = $_POST['message'];
+               $services = isset($_POST['services']) ? $_POST['services'] : [];
+               $services_list = implode(", ", $services);
+        
+               // Form validation
+               if (empty($name) || empty($email) || empty($phone) || empty($organization) || empty($services) || empty($message_content)) {
+                  echo "<script>sweetAlert('All Fields are required...!');</script>";
                } else {
-                  echo "<script>sweetAlert('Message could not be sent...');</script>";
+                  // Instantiate PHPMailer
+                  $mail = new PHPMailer(true);
+                  try {
+                     // Server settings
+                     $mail->isSMTP();
+                     $mail->Host = 'smtp.gmail.com';  // Replace with your SMTP server
+                     $mail->SMTPAuth = true;
+                     $mail->Username = 'laynasart27la@gmail.com';  // Replace with your email
+                     $mail->Password = 'fnwqlqaflxhzaouo';  // Replace with your password
+                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                     $mail->Port = 587;
+
+                     // Recipients
+                     $mail->setFrom('noreply@pswinfralogistics.com.com', 'PSW Infra Logistics');
+                     $mail->addAddress('laynasart27la@gmail.com');  // Add recipient email
+
+                     // Content
+                     $mail->isHTML(true);
+                     $mail->Subject = 'PSW Infra Logistics - Request a Quote Form';
+                     $mail->Body    = "<table border='0'>
+                     <tr><td><b>Name: </b></td><td>$name</td></tr>
+                     <tr><td><b>Email Id: </b></td><td>$email</td></tr>
+                     <tr><td><b>Contact Number: </b></td><td>$phone</td></tr>
+                     <tr><td><b>Organization: </b></td><td>$organization</td></tr>
+                     <tr><td><b>Service request for: </b></td><td>$services_list</td></tr>
+                     <tr><td><b>Message: </b></td><td>$message_content</td></tr>
+                     </table>";
+
+                     if (!empty($_FILES['files']['name'][0])) {
+                        foreach ($_FILES['files']['tmp_name'] as $key => $tmp_name) {
+                           $file_name = $_FILES['files']['name'][$key];
+                           $file_tmp_name = $_FILES['files']['tmp_name'][$key];
+                           $file_size = $_FILES['files']['size'][$key];
+                           $file_error = $_FILES['files']['error'][$key];
+
+                           // Check for file upload errors
+                           if ($file_error === UPLOAD_ERR_OK) {
+                              // Ensure the file exists in the tmp directory
+                              if (file_exists($file_tmp_name) && is_readable($file_tmp_name)) {
+                                 $mail->addAttachment($file_tmp_name, $file_name);  // Attach the file
+                              } else {
+                                 echo "<script>sweetAlert('Error!', 'Could not access the file: $file_name', 'error');</script>";
+                              }
+                           } else {
+                              echo "<script>sweetAlert('Error!', 'File upload error: $file_name', 'error');</script>";
+                           }
+                        }
+                     }
+
+                     // Send email
+                     if ($mail->send()) {
+                        echo '<script>sweetAlert("Your message has been sent successfully!");</script>';
+                     } else {
+                        echo "<script>sweetAlert('Message could not be sent.');</script>";
+                     }
+                  } catch (Exception $e) {
+                     echo "<script>sweetAlert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+                  }
                }
             }
-         } else {
-            header("Location: " . $_SERVER['PHP_SELF']);
          }
-      }
-      // if (isset($_POST['submit'])) {
-      //    if (empty($_POST['honeypot'])) {
-      //       $name = $_POST['name'];
-      //       $email = $_POST['email'];
-      //       $phone = $_POST['phone'];
-      //       $organization = $_POST['organization'];
-      //       $files = $_POST['files'];
-      //       $message = $_POST['message'];
-      //       $services = isset($_POST['services']) ? $_POST['services'] : [];
-      //       $services_list = implode(", ", $services);
-
-      //       // Check if the required fields are filled
-      //       if (empty($name) || empty($email) || empty($phone) || empty($organization) || empty($services) || empty($message) || empty($files) ) {
-      //          echo "<script>sweetAlert('All Fields are required...!');</script>";
-      //       } else {
-      //          $to = "laynasart27la@gmail.com";
-      //          $subject = "PSW Infra Logistics - Request a Quote Form";
-
-      //          if (!empty($files)) {
-      //             // File details
-      //             $file_tmp_name = $_FILES['files']['tmp_name'];
-      //             $file_name = $_FILES['files']['name'];
-      //             $file_size = $_FILES['files']['size'];
-      //             $file_type = $_FILES['files']['type'];
-
-      //             // Read the file content into a string
-      //             $handle = fopen($file_tmp_name, "r");
-      //             $content = fread($handle, $file_size);
-      //             fclose($handle);
-      //             $encoded_content = chunk_split(base64_encode($content));
-
-      //             // Boundary 
-      //             $boundary = md5("sanwebe");
-
-      //             // Headers
-      //             $headers = "From: Request a Quote <noreply@pswinfralogistics.com>\r\n";
-      //             // $headers .= "CC: diksha@gordinateur.com\r\n";
-      //             $headers .= "MIME-Version: 1.0\r\n";
-      //             $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
-
-      //             // Plain message
-      //             $message = "--$boundary\r\n";
-      //             $message .= "Content-Type: text/html; charset=UTF-8\r\n";
-      //             $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-      //             $message .= "<table border='0'>
-      //             <tr><td><b>Name: </b></td><td>$name</td></tr>
-      //             <tr><td><b>Email Id: </b></td><td>$email</td></tr>
-      //             <tr><td><b>Contact Number: </b></td><td>$phone</td></tr>
-      //             <tr><td><b>Organization: </b></td><td>$organization</td></tr>
-      //             <tr><td><b>Service request for: </b></td><td>$services</td></tr>
-      //             <tr><td><b>Message: </b></td><td>$message</td></tr>
-      //             </table>\r\n";
-
-      //             // Attachment
-      //             $message .= "--$boundary\r\n";
-      //             $message .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
-      //             $message .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
-      //             $message .= "Content-Transfer-Encoding: base64\r\n";
-      //             $message .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
-      //             $message .= "$encoded_content\r\n";
-      //             $message .= "--$boundary--";
-      //          } else {
-      //             $message .= "<table border='0'>
-      //             <tr><td><b>Name: </b></td><td>".$name."</td></tr>
-      //             <tr><td><b>Email Id: </b></td><td>".$email."</td></tr>
-      //             <tr><td><b>Contact Number: </b></td><td>".$phone."</td></tr>
-      //             <tr><td><b>Organization: </b></td><td>".$organization."</td></tr>
-      //             <tr><td><b>Service request for: </b></td><td>".$services."</td></tr>
-      //             <tr><td><b>Message: </b></td><td>".$message."</td></tr>
-      //             </table>\r\n";
-
-      //             $header = "From: Request a Quote <noreply@pswinfralogistics.com> \r\n";
-      //             // $header .= "CC:diksha@gordinateur.com \r\n";
-      //             $header .= "MIME-Version: 1.0\r\n";
-      //             $header .= "Content-type: text/html\r\n";
-      //          }
-
-      //          // Send email
-      //          if (mail($to, $subject, $message, $headers)) {
-      //             echo "<script>
-      //                $('#myModal').modal('show');
-      //                runiframe();
-      //             </script>";
-      //             exit();
-      //          } else {
-      //             echo "<script>sweetAlert('Message could not be sent...');</script>";
-      //          }
-      //       } 
-      //    }
-      //    else {
-      //       header("Location: " . $_SERVER['PHP_SELF']);
-      //    }
-      // }
       ?>
    </body>
 </html>

@@ -975,3 +975,10 @@ h1.heading {font-size: 2.083vw; line-height: 2.54vw;}
   color: #323232;
 }
 #viewmore.viewless img {transform: rotate(-180deg);}
+
+#filesname {
+  font-family: 'Inter';
+  font-size: 0.833vw;
+  line-height: 1.008vw;
+  margin: 1vw 0;
+}

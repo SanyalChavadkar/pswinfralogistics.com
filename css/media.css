@@ -585,6 +585,10 @@
     .req-form-wrapp .tab-pane .upload-box img {width: 8.205vw; margin-right: 8px;}
 
     #myModal iframe {height: 65vw;}
+    p#filesname {
+        font-size: 3.59vw;
+        line-height: 4.344vw;
+    }
 }
 @media(min-width:768px) {
 }
