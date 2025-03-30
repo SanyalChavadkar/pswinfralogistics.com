@@ -20,7 +20,7 @@
                      <div class="section-fifty">
                         <div class="left-sec">
                            <div class="section-title position-relative">
-                              <h1 class="heading">Seamless <span class="accentred">logistics</span> solution <br>for your business</h1>
+                              <h1 class="heading"><span class="accentred">Seamless</span> logistics solution <br>for your business</h1>
                            </div>
                            <div class="d-flex btn-box">
                               <a href="request-a-quote.php" class="common-btn btn-red">request a quote</a>
@@ -311,6 +311,8 @@
                            </div>
                            <div class="message-div">
                               <form action="" method="post" id="contact-form">
+                                 <input type="hidden" name="honeypot" class="d-none">
+                                 <input type="hidden" name="form_type" value="home_form" class="d-none">
                                  <div class="form-group">
                                     <input type="text" name="name" class="form-control f-light" id="txtFirstName1" required pattern="[A-Za-z A-Za-z]{1,}" title="Please enter only letters" maxlength="50" placeholder="Name">
                                  </div>
@@ -471,14 +473,86 @@
                });
             });
 
+            // Check if the element exists
             var container_video = $('#container-vid')[0];
-            container_video.addEventListener('loadedmetadata', function() {
-               var half = container_video.duration / 2;
-               container_video.addEventListener('timeupdate', function() {
-                  if (container_video.currentTime >= half) {
-                     container_video.pause();
-                  }
-               });
+
+            if (container_video) {
+                console.log('Video element:', container_video);
+        
+                // Function to handle loadedmetadata event
+                function handleLoadedMetadata() {
+                    var half = container_video.duration / 2;
+                    console.log('Video loaded, duration: ' + container_video.duration);
+                    console.log('Half duration: ' + half);
+        
+                    // Function to handle the timeupdate event
+                    function onTimeUpdate() {
+                        console.log('Current time: ' + container_video.currentTime);
+                        console.log('Half point: ' + half);
+        
+                        if (container_video.currentTime >= half) {
+                            console.log('Pausing the video...');
+                            container_video.pause();
+                        }
+                    }
+        
+                    // Add the timeupdate event listener
+                    container_video.addEventListener('timeupdate', onTimeUpdate);
+        
+                    // Add a check for loading errors
+                    container_video.addEventListener('error', function() {
+                        console.error('Error loading video');
+                    });
+        
+                    // Store the timeupdate handler function globally so it can be removed later
+                    window.onTimeUpdate = onTimeUpdate;
+                }
+        
+                // Check if the video has already loaded metadata
+                if (container_video.readyState >= 1) {
+                    handleLoadedMetadata();
+                } else {
+                    container_video.addEventListener('loadedmetadata', handleLoadedMetadata);
+                }
+            } else {
+                console.log('Video element not found');
+            }
+            
+            // When the form is submitted
+            $("#contact-form").on("submit", function(e) {
+                e.preventDefault(); // Prevent page refresh
+            
+                // Create a FormData object to easily send form data
+                var formData = new FormData(this);
+            
+                // Make an AJAX request
+                $.ajax({
+                    url: 'send_email.php', // Form is posted to the same page
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        if (response.trim() === 'success') {
+                            var container_video = $('#container-vid')[0];
+                            container_video.removeEventListener('timeupdate', window.onTimeUpdate);
+                            container_video.play();
+                            $("#contact-form")[0].reset();
+                        } else if (response.trim() === 'error') {
+                            sweetAlert('Message could not be sent...');
+                        } else {
+                            sweetAlert('Unexpected error occurred.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Log the error details to the console for debugging
+                        console.error('AJAX Error Details:');
+                        console.error('xhr:', xhr);
+                        console.error('status:', status);
+                        console.error('error:', error);
+                        sweetAlert('An error occurred while sending the message.');
+                    }
+                });
             });
          });
       </script>
@@ -569,50 +643,7 @@
         }
       });
    </script>
-   <?php
-      if(isset($_POST['homesubmit'])) {
-         $honeypot = $_POST['honeypot'];
-         if (empty($honeypot)) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $service = $_POST['service'];
-            // $enquiry = $_POST['enq_for'];
-            $message = $_POST['message'];
-
-            //if ((empty($_POST['name'])) || (empty($_POST['email'])) || (empty($_POST['contact'])) || (empty($_POST['message'])))
-            if ((empty($_POST['name'])) || (empty($_POST['email'])) || (empty($_POST['phone'])) || (empty($_POST['service']))) {
-               echo "<script>sweetAlert('All Fields are required...!');</script>";
-            } else {
-               $to = "laynasart27la@gmail.com";
-               $subject = "PSW Infra Logictics - Leave Us a Message Form";
-
-               $message = '<table border="0"><tr><td><b>Name  :</b></td><td>' .$_POST['name']."</td></tr>";
-               $message .= '<tr><td><b>Email Id :</b></td><td>' .$_POST['email'] ."</td></tr>";
-               $message .= '<tr><td><b>Service :</b></td><td>' .$_POST['service'] ."</td></tr>";
-               $message .= '<tr><td><b>Contact Number :</b></td><td>' .$_POST['phone'] ."</td></tr>";
-               $message .= '<tr><td><b>Message :</b></td><td>' .$_POST['message'] ."</td></tr></table>";
-
-               $header = "From: Leave us a Message - PSW Infra Logistics <noreply@uat.pswinfralogistics.com> \r\n";
-               $header .= "CC:pswinfralogistics@gmail.com \r\n";
-               $header .= "MIME-Version: 1.0\r\n";
-               $header .= "Content-type: text/html\r\n";
-
-               if(mail ($to,$subject,$message,$header)) {
-                  // echo "<script>sweetAlert('Thank you ! <br> Message sent successfully.<br>We will get back to you soon.');</script>";
-                  // echo "<script>alert('Thank you ! <br> We will get back to you soon.');</script>";
-                  echo '<script>
-                     var container_video = $("#container-vid")[0];
-                     container_video.play();
-                  </script>';
-               } else {
-                  echo "<script>sweetAlert('Message could not be sent...');</script>";
-                  //header("location:contact-us.php");
-                  // echo "<script>alert('Message could not be sent...');</script>";
-               }
-            }
-         }
-      }
-   ?>
+   
+    
    </body>
 </html>

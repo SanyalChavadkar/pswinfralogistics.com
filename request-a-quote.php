@@ -474,7 +474,7 @@
 
                      // Send email
                      if ($mail->send()) {
-                        echo '<script>sweetAlert("Your message has been sent successfully!");</script>';
+                        echo '<script>var myModal = new bootstrap.Modal(document.getElementById("myModal")); myModal.show(); const iframeWindow = $("iframe")[0].contentWindow; if (iframeWindow && iframeWindow.lottie) { iframeWindow.lottie.play(); }</script>';
                      } else {
                         echo "<script>sweetAlert('Message could not be sent.');</script>";
                      }

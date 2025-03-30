@@ -1,0 +1,2 @@
+[16-Feb-2025 11:54:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/u488351631/domains/pswinfralogistics.com/public_html/uat/index.php:15) in /home/u488351631/domains/pswinfralogistics.com/public_html/uat/index.php on line 640
+[16-Feb-2025 11:55:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/u488351631/domains/pswinfralogistics.com/public_html/uat/index.php:15) in /home/u488351631/domains/pswinfralogistics.com/public_html/uat/index.php on line 640
